@@ -1,4 +1,10 @@
 import json
+import requests
+
+url = 'http://localhost:5000/preguntas'
+
+with open('preguntas.json', 'r', encoding='utf-8') as file:
+    preguntas = json.load(file)
 
 data = {
     "preguntes": [
@@ -1346,6 +1352,16 @@ data = {
     }
     ]
 }
+
+for pregunta in preguntas:
+    try:
+        response = requests.post(url, json=pregunta)
+        if response.status_code == 201:
+            print(f'Pregunta agregada: {response.json()}')
+        else:
+            print(f'Error al agregar pregunta: {response.status_code}, {response.text}')
+    except requests.exceptions.RequestException as e:
+        print(f'Error de conexión: {e}')
 
 for pregunta in data["preguntes"]:
     print(f"Pregunta {pregunta['id']}: {pregunta['pregunta']}")

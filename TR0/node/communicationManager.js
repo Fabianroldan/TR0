@@ -1,57 +1,23 @@
-const API_URL = 'http://localhost:3000/preguntas';
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const app = express();
+const PORT = 5000;
 
-async function getPreguntas() {
-    const response = await fetch(API_URL);
-    if (!response.ok) {
-        throw new Error('Error al obtener preguntas');
-    }
-    return response.json();
-}
+app.use(express.json());
 
-async function getPregunta(id) {
-    const response = await fetch(`${API_URL}/${id}`);
-    if (!response.ok) {
-        throw new Error('Error al obtener la pregunta');
-    }
-    return response.json();
-}
+let preguntas = [];
 
-async function createPregunta(pregunta) {
-    const response = await fetch(API_URL, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(pregunta)
-    });
-    if (!response.ok) {
-        throw new Error('Error al crear la pregunta');
-    }
-    return response.json();
-}
+app.get('/preguntas', (req, res) => {
+    res.json(preguntas);
+});
 
-async function updatePregunta(id, pregunta) {
-    const response = await fetch(`${API_URL}/${id}`, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(pregunta)
-    });
-    if (!response.ok) {
-        throw new Error('Error al actualizar la pregunta');
-    }
-    return response.json();
-}
+app.post('/preguntas', (req, res) => {
+    const nuevaPregunta = req.body;
+    preguntas.push(nuevaPregunta);
+    res.status(201).json(nuevaPregunta);
+});
 
-async function deletePregunta(id) {
-    const response = await fetch(`${API_URL}/${id}`, {
-        method: 'DELETE'
-    });
-    if (!response.ok) {
-        throw new Error('Error al eliminar la pregunta');
-    }
-    return response.json();
-}
-
-export { getPreguntas, getPregunta, createPregunta, updatePregunta, deletePregunta };
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+});
