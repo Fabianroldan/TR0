@@ -1,7 +1,10 @@
 const express = require('express');
+const cors = require('cors');
+
 const app = express();
 const PORT = 5000;
 
+app.use(cors());
 app.use(express.json());
 
 let preguntas = [
@@ -828,7 +831,7 @@ let preguntas = [
             { "resposta": "Giza", "correcta": false },
             { "resposta": "Luxor", "correcta": false }
         ],
-        "imatge": "/images/egipto.jpg"
+        "imatge": "/images/cairo.jpg"
     },
     {
         "id": 76,

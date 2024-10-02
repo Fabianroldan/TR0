@@ -825,7 +825,7 @@ data = {
                 {"resposta": "Giza", "correcta": False},
                 {"resposta": "Luxor", "correcta": False}
             ],
-            "imatge": "/images/egipto.jpg"
+            "imatge": "/images/cairo.jpg"
         },
         {
             "id": 76,
