@@ -11,11 +11,9 @@ app.use(express.json());
 
 let preguntas = [];
 
-// Función para cargar preguntas desde un archivo JSON
 async function getPreguntas() {
     const filePath = path.join(__dirname, '../preguntes.json');
 
-    // Intenta cargar desde el archivo
     try {
         const data = await fs.promises.readFile(filePath, 'utf8');
         preguntas = JSON.parse(data);
@@ -25,10 +23,8 @@ async function getPreguntas() {
     }
 }
 
-// Llamar a la función al inicio para cargar preguntas
 getPreguntas();
 
-// Rutas de la API
 app.get('/preguntas', (req, res) => {
     res.json(preguntas);
 });
@@ -73,7 +69,6 @@ app.delete('/preguntas/:id', (req, res) => {
     }
 });
 
-// Iniciar el servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}/preguntas`);
 });
