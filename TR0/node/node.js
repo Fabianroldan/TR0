@@ -11,62 +11,64 @@ app.use(express.json());
 
 let preguntas = [];
 
-async function getPreguntas() {
-    const filePath = path.join(__dirname, '../preguntes.json');
+const cargarPreguntas = () => {
+    const data = fs.readFileSync(path.join(__dirname, '../preguntes.json'));
+    preguntas = JSON.parse(data).preguntes;
+};
 
-    try {
-        const data = await fs.promises.readFile(filePath, 'utf8');
-        preguntas = JSON.parse(data);
-        console.log('Preguntas cargadas desde el archivo:', preguntas);
-    } catch (err) {
-        console.error('Error al obtener preguntas desde el archivo:', err);
-    }
-}
+const guardarPreguntas = () => {
+    fs.writeFileSync(path.join(__dirname, 'preguntas.json'), JSON.stringify({ preguntes: preguntas }, null, 2));
+};
 
-getPreguntas();
+cargarPreguntas();
 
 app.get('/preguntas', (req, res) => {
     res.json(preguntas);
 });
 
 app.get('/preguntas/:id', (req, res) => {
-    const pregunta = preguntas.find(p => p.id === parseInt(req.params.id));
-    if (pregunta) {
-        res.json(pregunta);
-    } else {
-        res.status(404).send('Pregunta no encontrada');
+    const { id } = req.params;
+    const pregunta = preguntas.find(p => p.id == id);
+
+    if (!pregunta) {
+        return res.status(404).json({ mensaje: 'Pregunta no encontrada' });
     }
+
+    res.json(pregunta);
 });
 
+
 app.post('/preguntas', (req, res) => {
-    const { pregunta, opcions, imatge, continente, dificultad } = req.body;
-    if (!pregunta || !Array.isArray(opcions) || opcions.length === 0 || !imatge || !continente || typeof dificultad !== 'number') {
-        return res.status(400).json({ error: 'Invalid input format' });
-    }
-    const id = preguntas.length > 0 ? preguntas[preguntas.length - 1].id + 1 : 1;
-    const nuevaPregunta = { id, pregunta, opcions, imatge, continente, dificultad };
+    const nuevaPregunta = { id: preguntas.length + 1, ...req.body };
     preguntas.push(nuevaPregunta);
-    res.json(nuevaPregunta);
+    guardarPreguntas();
+    res.status(201).json(nuevaPregunta);
 });
 
 app.put('/preguntas/:id', (req, res) => {
-    const index = preguntas.findIndex(p => p.id === parseInt(req.params.id));
-    if (index !== -1) {
-        preguntas[index] = { id: parseInt(req.params.id), ...req.body };
-        res.json(preguntas[index]);
-    } else {
-        res.status(404).send('Pregunta no encontrada');
+    const { id } = req.params;
+    const preguntaIndex = preguntas.findIndex(p => p.id == id);
+
+    if (preguntaIndex === -1) {
+        return res.status(404).json({ mensaje: 'Pregunta no encontrada' });
     }
+
+    preguntas[preguntaIndex] = { ...preguntas[preguntaIndex], ...req.body };
+    guardarPreguntas();
+    res.json(preguntas[preguntaIndex]);
 });
 
 app.delete('/preguntas/:id', (req, res) => {
-    const index = preguntas.findIndex(p => p.id === parseInt(req.params.id));
-    if (index !== -1) {
-        preguntas.splice(index, 1);
-        res.status(204).send();
-    } else {
-        res.status(404).send('Pregunta no encontrada');
+    const { id } = req.params;
+    const preguntaIndex = preguntas.findIndex(p => p.id == id);
+
+    if (preguntaIndex === -1) {
+        return res.status(404).json({ mensaje: 'Pregunta no encontrada' });
     }
+
+    preguntas.splice(preguntaIndex, 1);
+    guardarPreguntas();
+    res.status(200).json({ mensaje: 'Pregunta eliminada correctamente' });
 });
 
 app.listen(PORT, () => {
