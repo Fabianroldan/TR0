@@ -20,13 +20,13 @@
             {{ opcion.resposta }} ({{ opcion.correcta ? 'Correcta' : 'Incorrecta' }})
           </li>
         </ul>
+        <p>Continente: {{ pregunta.continente }}</p>
+        <p>Dificultad: {{ pregunta.dificultad }}</p>
         <img v-if="pregunta.imatge" :src="pregunta.imatge" alt="Imagen de la pregunta" />
         <button @click="editPregunta(pregunta)">Editar</button>
         <button @click="deletePregunta(pregunta.id)">Eliminar</button>
       </li>
     </ul>
-
-
   </div>
 </template>
 
@@ -40,7 +40,9 @@ export default {
       nuevaPregunta: {
         pregunta: '',
         opcions: [],
-        imatge: ''
+        imatge: '',
+        continente: '',
+        dificultad: null
       },
       editMode: false,
       preguntaId: null,
@@ -85,7 +87,7 @@ export default {
     },
 
     resetForm() {
-      this.nuevaPregunta = { pregunta: '', opcions: [], imatge: '' };
+      this.nuevaPregunta = { pregunta: '', opcions: [], imatge: '', continente: '', dificultad: null };
       this.editMode = false;
       this.preguntaId = null;
     }
