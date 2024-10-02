@@ -17,7 +17,9 @@ let preguntas = [
             { "resposta": "Valencia", "correcta": false },
             { "resposta": "Sevilla", "correcta": false }
         ],
-        "imatge": "images/madrid.jpg"
+        "imatge": "images/madrid.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 2,
@@ -28,7 +30,9 @@ let preguntas = [
             { "resposta": "París", "correcta": true },
             { "resposta": "Niza", "correcta": false }
         ],
-        "imatge": "/images/paris.jpg"
+        "imatge": "/images/paris.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 3,
@@ -39,7 +43,9 @@ let preguntas = [
             { "resposta": "Fráncfort", "correcta": false },
             { "resposta": "Hamburgo", "correcta": false }
         ],
-        "imatge": "/images/berlin.jpg"
+        "imatge": "/images/berlin.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 4,
@@ -50,7 +56,9 @@ let preguntas = [
             { "resposta": "Nápoles", "correcta": false },
             { "resposta": "Turín", "correcta": false }
         ],
-        "imatge": "/images/roma.jpg"
+        "imatge": "/images/roma.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 5,
@@ -61,7 +69,9 @@ let preguntas = [
             { "resposta": "Braga", "correcta": false },
             { "resposta": "Coímbra", "correcta": false }
         ],
-        "imatge": "/images/lisboa.jpg"
+        "imatge": "/images/lisboa.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 6,
@@ -72,7 +82,9 @@ let preguntas = [
             { "resposta": "Liverpool", "correcta": false },
             { "resposta": "Birmingham", "correcta": false }
         ],
-        "imatge": "/images/londres.jpg"
+        "imatge": "/images/londres.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 7,
@@ -83,7 +95,9 @@ let preguntas = [
             { "resposta": "Vancouver", "correcta": false },
             { "resposta": "Montreal", "correcta": false }
         ],
-        "imatge": "/images/ottawa.jpg"
+        "imatge": "/images/ottawa.jpg",
+        "continente": "América del Norte",
+        "dificultad": 2
     },
     {
         "id": 8,
@@ -94,7 +108,9 @@ let preguntas = [
             { "resposta": "Melbourne", "correcta": false },
             { "resposta": "Perth", "correcta": false }
         ],
-        "imatge": "/images/canberra.jpg"
+        "imatge": "/images/canberra.jpg",
+        "continente": "Oceanía",
+        "dificultad": 3
     },
     {
         "id": 9,
@@ -105,7 +121,9 @@ let preguntas = [
             { "resposta": "São Paulo", "correcta": false },
             { "resposta": "Salvador", "correcta": false }
         ],
-        "imatge": "/images/brasilia.jpg"
+        "imatge": "/images/brasilia.jpg",
+        "continente": "América del Sur",
+        "dificultad": 2
     },
     {
         "id": 10,
@@ -116,7 +134,9 @@ let preguntas = [
             { "resposta": "Rosario", "correcta": false },
             { "resposta": "La Plata", "correcta": false }
         ],
-        "imatge": "/images/buenos_aires.jpg"
+        "imatge": "/images/buenos_aires.jpg",
+        "continente": "América del Sur",
+        "dificultad": 2
     },
     {
         "id": 11,
@@ -127,7 +147,9 @@ let preguntas = [
             { "resposta": "Concepción", "correcta": false },
             { "resposta": "La Serena", "correcta": false }
         ],
-        "imatge": "/images/santiago.jpg"
+        "imatge": "/images/santiago.jpg",
+        "continente": "América del Sur",
+        "dificultad": 2
     },
     {
         "id": 12,
@@ -138,7 +160,9 @@ let preguntas = [
             { "resposta": "Medellín", "correcta": false },
             { "resposta": "Cali", "correcta": false }
         ],
-        "imatge": "/images/bogota.jpg"
+        "imatge": "/images/bogota.jpg",
+        "continente": "América del Sur",
+        "dificultad": 2
     },
     {
         "id": 13,
@@ -149,7 +173,9 @@ let preguntas = [
             { "resposta": "Cusco", "correcta": false },
             { "resposta": "Trujillo", "correcta": false }
         ],
-        "imatge": "/images/lima.jpg"
+        "imatge": "/images/lima.jpg",
+        "continente": "América del Sur",
+        "dificultad": 2
     },
     {
         "id": 14,
@@ -160,7 +186,9 @@ let preguntas = [
             { "resposta": "Valencia", "correcta": false },
             { "resposta": "Barquisimeto", "correcta": false }
         ],
-        "imatge": "/images/caracas.jpg"
+        "imatge": "/images/caracas.jpg",
+        "continente": "América del Sur",
+        "dificultad": 2
     },
     {
         "id": 15,
@@ -171,7 +199,9 @@ let preguntas = [
             { "resposta": "Paysandú", "correcta": false },
             { "resposta": "Tacuarembó", "correcta": false }
         ],
-        "imatge": "/images/montevideo.jpg"
+        "imatge": "/images/montevideo.jpg",
+        "continente": "América del Sur",
+        "dificultad": 2
     },
     {
         "id": 16,
@@ -182,7 +212,9 @@ let preguntas = [
             { "resposta": "Encarnación", "correcta": false },
             { "resposta": "Luque", "correcta": false }
         ],
-        "imatge": "/images/asuncion.jpg"
+        "imatge": "/images/asuncion.jpg",
+        "continente": "América del Sur",
+        "dificultad": 2
     },
     {
         "id": 17,
@@ -193,7 +225,9 @@ let preguntas = [
             { "resposta": "Cochabamba", "correcta": false },
             { "resposta": "Santa Cruz de la Sierra", "correcta": false }
         ],
-        "imatge": "/images/la_paz.jpg"
+        "imatge": "/images/la_paz.jpg",
+        "continente": "América del Sur",
+        "dificultad": 2
     },
     {
         "id": 18,
@@ -204,7 +238,9 @@ let preguntas = [
             { "resposta": "Cuenca", "correcta": false },
             { "resposta": "Manta", "correcta": false }
         ],
-        "imatge": "/images/quito.jpg"
+        "imatge": "/images/quito.jpg",
+        "continente": "América del Sur",
+        "dificultad": 2
     },
     {
         "id": 19,
@@ -215,7 +251,9 @@ let preguntas = [
             { "resposta": "Patras", "correcta": false },
             { "resposta": "Heraclión", "correcta": false }
         ],
-        "imatge": "/images/atenas.jpg"
+        "imatge": "/images/atenas.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 20,
@@ -226,7 +264,9 @@ let preguntas = [
             { "resposta": "Malmö", "correcta": false },
             { "resposta": "Upsala", "correcta": false }
         ],
-        "imatge": "/images/estocolmo.jpg"
+        "imatge": "/images/estocolmo.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 21,
@@ -237,7 +277,9 @@ let preguntas = [
             { "resposta": "Stavanger", "correcta": false },
             { "resposta": "Trondheim", "correcta": false }
         ],
-        "imatge": "/images/oslo.jpg"
+        "imatge": "/images/oslo.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 22,
@@ -248,7 +290,9 @@ let preguntas = [
             { "resposta": "Oulu", "correcta": false },
             { "resposta": "Turku", "correcta": false }
         ],
-        "imatge": "/images/helsinki.jpg"
+        "imatge": "/images/helsinki.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 23,
@@ -259,7 +303,9 @@ let preguntas = [
             { "resposta": "Odense", "correcta": false },
             { "resposta": "Aalborg", "correcta": false }
         ],
-        "imatge": "/images/copenhague.jpg"
+        "imatge": "/images/copenhague.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 24,
@@ -270,7 +316,9 @@ let preguntas = [
             { "resposta": "Ginebra", "correcta": false },
             { "resposta": "Basilea", "correcta": false }
         ],
-        "imatge": "/images/berna.jpg"
+        "imatge": "/images/berna.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 25,
@@ -281,7 +329,9 @@ let preguntas = [
             { "resposta": "Innsbruck", "correcta": false },
             { "resposta": "Graz", "correcta": false }
         ],
-        "imatge": "/images/viena.jpg"
+        "imatge": "/images/viena.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 26,
@@ -292,7 +342,9 @@ let preguntas = [
             { "resposta": "Amberes", "correcta": false },
             { "resposta": "Gante", "correcta": false }
         ],
-        "imatge": "/images/bruselas.jpg"
+        "imatge": "/images/bruselas.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 27,
@@ -303,7 +355,9 @@ let preguntas = [
             { "resposta": "La Haya", "correcta": false },
             { "resposta": "Eindhoven", "correcta": false }
         ],
-        "imatge": "/images/amsterdam.jpg"
+        "imatge": "/images/amsterdam.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 28,
@@ -314,7 +368,9 @@ let preguntas = [
             { "resposta": "Galway", "correcta": false },
             { "resposta": "Limerick", "correcta": false }
         ],
-        "imatge": "/images/dublin.jpg"
+        "imatge": "/images/dublin.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 29,
@@ -325,7 +381,9 @@ let preguntas = [
             { "resposta": "Gdansk", "correcta": false },
             { "resposta": "Poznań", "correcta": false }
         ],
-        "imatge": "/images/varsovia.jpg"
+        "imatge": "/images/varsovia.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 30,
@@ -336,7 +394,9 @@ let preguntas = [
             { "resposta": "Szeged", "correcta": false },
             { "resposta": "Miskolc", "correcta": false }
         ],
-        "imatge": "/images/budapest.jpg"
+        "imatge": "/images/budapest.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 31,
@@ -347,7 +407,9 @@ let preguntas = [
             { "resposta": "Ostrava", "correcta": false },
             { "resposta": "Pilsen", "correcta": false }
         ],
-        "imatge": "/images/praga.jpg"
+        "imatge": "/images/praga.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 32,
@@ -358,7 +420,9 @@ let preguntas = [
             { "resposta": "Nitra", "correcta": false },
             { "resposta": "Trnava", "correcta": false }
         ],
-        "imatge": "/images/bratislava.jpg"
+        "imatge": "/images/bratislava.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 33,
@@ -369,7 +433,9 @@ let preguntas = [
             { "resposta": "Dubrovnik", "correcta": false },
             { "resposta": "Rijeka", "correcta": false }
         ],
-        "imatge": "/images/zagreb.jpg"
+        "imatge": "/images/zagreb.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 34,
@@ -380,7 +446,9 @@ let preguntas = [
             { "resposta": "Koper", "correcta": false },
             { "resposta": "Celje", "correcta": false }
         ],
-        "imatge": "/images/liubliana.jpg"
+        "imatge": "/images/liubliana.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 35,
@@ -391,7 +459,9 @@ let preguntas = [
             { "resposta": "Timișoara", "correcta": false },
             { "resposta": "Iași", "correcta": false }
         ],
-        "imatge": "/images/bucarest.jpg"
+        "imatge": "/images/bucarest.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 36,
@@ -402,7 +472,9 @@ let preguntas = [
             { "resposta": "Plovdiv", "correcta": false },
             { "resposta": "Burgas", "correcta": false }
         ],
-        "imatge": "/images/sofia.jpg"
+        "imatge": "/images/sofia.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 37,
@@ -413,7 +485,9 @@ let preguntas = [
             { "resposta": "Niš", "correcta": false },
             { "resposta": "Kragujevac", "correcta": false }
         ],
-        "imatge": "/images/belgrado.jpg"
+        "imatge": "/images/belgrado.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 38,
@@ -424,7 +498,9 @@ let preguntas = [
             { "resposta": "Banja Luka", "correcta": false },
             { "resposta": "Tuzla", "correcta": false }
         ],
-        "imatge": "/images/sarajevo.jpg"
+        "imatge": "/images/sarajevo.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 39,
@@ -435,7 +511,9 @@ let preguntas = [
             { "resposta": "Bitola", "correcta": false },
             { "resposta": "Tetovo", "correcta": false }
         ],
-        "imatge": "/images/skopie.jpg"
+        "imatge": "/images/skopie.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 40,
@@ -446,7 +524,9 @@ let preguntas = [
             { "resposta": "Shkodra", "correcta": false },
             { "resposta": "Vlora", "correcta": false }
         ],
-        "imatge": "/images/tirana.jpg"
+        "imatge": "/images/tirana.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 41,
@@ -457,7 +537,9 @@ let preguntas = [
             { "resposta": "Kotor", "correcta": false },
             { "resposta": "Herceg Novi", "correcta": false }
         ],
-        "imatge": "/images/podgorica.jpg"
+        "imatge": "/images/podgorica.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 42,
@@ -468,7 +550,9 @@ let preguntas = [
             { "resposta": "Gjakova", "correcta": false },
             { "resposta": "Peja", "correcta": false }
         ],
-        "imatge": "/images/pristina.jpg"
+        "imatge": "/images/pristina.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 43,
@@ -479,7 +563,9 @@ let preguntas = [
             { "resposta": "Leópolis", "correcta": false },
             { "resposta": "Járkov", "correcta": false }
         ],
-        "imatge": "/images/kiev.jpg"
+        "imatge": "/images/kiev.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 44,
@@ -490,7 +576,9 @@ let preguntas = [
             { "resposta": "Brest", "correcta": false },
             { "resposta": "Vítebsk", "correcta": false }
         ],
-        "imatge": "/images/minsk.jpg"
+        "imatge": "/images/minsk.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 45,
@@ -501,7 +589,9 @@ let preguntas = [
             { "resposta": "Liepaja", "correcta": false },
             { "resposta": "Jelgava", "correcta": false }
         ],
-        "imatge": "/images/riga.jpg"
+        "imatge": "/images/riga.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 46,
@@ -512,7 +602,9 @@ let preguntas = [
             { "resposta": "Klaipeda", "correcta": false },
             { "resposta": "Šiauliai", "correcta": false }
         ],
-        "imatge": "/images/vilna.jpg"
+        "imatge": "/images/vilna.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 47,
@@ -523,7 +615,9 @@ let preguntas = [
             { "resposta": "Narva", "correcta": false },
             { "resposta": "Pärnu", "correcta": false }
         ],
-        "imatge": "/images/tallin.jpg"
+        "imatge": "/images/tallin.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 48,
@@ -534,7 +628,9 @@ let preguntas = [
             { "resposta": "Bălți", "correcta": false },
             { "resposta": "Cahul", "correcta": false }
         ],
-        "imatge": "/images/chisinau.jpg"
+        "imatge": "/images/chisinau.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 49,
@@ -545,7 +641,9 @@ let preguntas = [
             { "resposta": "Vanadzor", "correcta": false },
             { "resposta": "Ejmiatsin", "correcta": false }
         ],
-        "imatge": "/images/erevan.jpg"
+        "imatge": "/images/erevan.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 50,
@@ -556,7 +654,9 @@ let preguntas = [
             { "resposta": "Kutaisi", "correcta": false },
             { "resposta": "Rustavi", "correcta": false }
         ],
-        "imatge": "/images/tiflis.jpg"
+        "imatge": "/images/tiflis.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 51,
@@ -567,7 +667,9 @@ let preguntas = [
             { "resposta": "Sumqayit", "correcta": false },
             { "resposta": "Naxçıvan", "correcta": false }
         ],
-        "imatge": "/images/baku.jpg"
+        "imatge": "/images/baku.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 52,
@@ -578,7 +680,9 @@ let preguntas = [
             { "resposta": "Shymkent", "correcta": false },
             { "resposta": "Karaganda", "correcta": false }
         ],
-        "imatge": "/images/astana.jpg"
+        "imatge": "/images/astana.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 53,
@@ -589,7 +693,9 @@ let preguntas = [
             { "resposta": "Bujará", "correcta": false },
             { "resposta": "Andiján", "correcta": false }
         ],
-        "imatge": "/images/tashkent.jpg"
+        "imatge": "/images/tashkent.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 54,
@@ -600,7 +706,9 @@ let preguntas = [
             { "resposta": "Dashoguz", "correcta": false },
             { "resposta": "Turkmenabat", "correcta": false }
         ],
-        "imatge": "/images/ashgabat.jpg"
+        "imatge": "/images/ashgabat.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 55,
@@ -611,7 +719,9 @@ let preguntas = [
             { "resposta": "Jalal-Abad", "correcta": false },
             { "resposta": "Karakol", "correcta": false }
         ],
-        "imatge": "/images/biskek.jpg"
+        "imatge": "/images/biskek.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 56,
@@ -622,7 +732,9 @@ let preguntas = [
             { "resposta": "Kulob", "correcta": false },
             { "resposta": "Istaravshan", "correcta": false }
         ],
-        "imatge": "/images/dusambe.jpg"
+        "imatge": "/images/dusambe.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 57,
@@ -633,7 +745,9 @@ let preguntas = [
             { "resposta": "Herat", "correcta": false },
             { "resposta": "Mazār-e Šarīf", "correcta": false }
         ],
-        "imatge": "/images/kabul.jpg"
+        "imatge": "/images/kabul.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 58,
@@ -644,7 +758,9 @@ let preguntas = [
             { "resposta": "Lahore", "correcta": false },
             { "resposta": "Faisalabad", "correcta": false }
         ],
-        "imatge": "/images/islamabad.jpg"
+        "imatge": "/images/islamabad.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 59,
@@ -655,106 +771,9 @@ let preguntas = [
             { "resposta": "Isfahán", "correcta": false },
             { "resposta": "Mashhad", "correcta": false }
         ],
-        "imatge": "/images/teheran.jpg"
-    },
-    {
-        "id": 60,
-        "pregunta": "¿Cuál es la capital de Irak?",
-        "opcions": [
-            { "resposta": "Mosul", "correcta": false },
-            { "resposta": "Bagdad", "correcta": true },
-            { "resposta": "Basora", "correcta": false },
-            { "resposta": "Erbil", "correcta": false }
-        ],
-        "imatge": "/images/bagdad.jpg"
-    },
-    {
-        "id": 61,
-        "pregunta": "¿Cuál es la capital de Siria?",
-        "opcions": [
-            { "resposta": "Alepo", "correcta": false },
-            { "resposta": "Damasco", "correcta": true },
-            { "resposta": "Homs", "correcta": false },
-            { "resposta": "Latakia", "correcta": false }
-        ],
-        "imatge": "/images/damasco.jpg"
-    },
-    {
-        "id": 62,
-        "pregunta": "¿Cuál es la capital de Líbano?",
-        "opcions": [
-            { "resposta": "Trípoli", "correcta": false },
-            { "resposta": "Beirut", "correcta": true },
-            { "resposta": "Sidón", "correcta": false },
-            { "resposta": "Baalbek", "correcta": false }
-        ],
-        "imatge": "/images/beirut.jpg"
-    },
-    {
-        "id": 63,
-        "pregunta": "¿Cuál es la capital de Jordania?",
-        "opcions": [
-            { "resposta": "Aqaba", "correcta": false },
-            { "resposta": "Amán", "correcta": true },
-            { "resposta": "Zarqa", "correcta": false },
-            { "resposta": "Irbid", "correcta": false }
-        ],
-        "imatge": "/images/aman.jpg"
-    },
-    {
-        "id": 64,
-        "pregunta": "¿Cuál es la capital de Israel?",
-        "opcions": [
-            { "resposta": "Tel Aviv", "correcta": false },
-            { "resposta": "Jerusalén", "correcta": true },
-            { "resposta": "Haifa", "correcta": false },
-            { "resposta": "Eilat", "correcta": false }
-        ],
-        "imatge": "/images/jerusalen.jpg"
-    },
-    {
-        "id": 65,
-        "pregunta": "¿Cuál es la capital de Arabia Saudita?",
-        "opcions": [
-            { "resposta": "Yeda", "correcta": false },
-            { "resposta": "Riad", "correcta": true },
-            { "resposta": "La Meca", "correcta": false },
-            { "resposta": "Medina", "correcta": false }
-        ],
-        "imatge": "/images/riad.jpg"
-    },
-    {
-        "id": 66,
-        "pregunta": "¿Cuál es la capital de Emiratos Árabes Unidos?",
-        "opcions": [
-            { "resposta": "Dubái", "correcta": false },
-            { "resposta": "Abu Dabi", "correcta": true },
-            { "resposta": "Sharjah", "correcta": false },
-            { "resposta": "Al Ain", "correcta": false }
-        ],
-        "imatge": "/images/abu_dabi.jpg"
-    },
-    {
-        "id": 67,
-        "pregunta": "¿Cuál es la capital de Japón?",
-        "opcions": [
-            { "resposta": "Osaka", "correcta": false },
-            { "resposta": "Tokio", "correcta": true },
-            { "resposta": "Kioto", "correcta": false },
-            { "resposta": "Nagasaki", "correcta": false }
-        ],
-        "imatge": "/images/tokio.jpg"
-    },
-    {
-        "id": 68,
-        "pregunta": "¿Cuál es la capital de Omán?",
-        "opcions": [
-            { "resposta": "Salalah", "correcta": false },
-            { "resposta": "Mascate", "correcta": true },
-            { "resposta": "Nizwa", "correcta": false },
-            { "resposta": "Sohar", "correcta": false }
-        ],
-        "imatge": "/images/mascate.jpg"
+        "imatge": "/images/teheran.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 69,
@@ -765,7 +784,9 @@ let preguntas = [
             { "resposta": "Al Wakrah", "correcta": false },
             { "resposta": "Umm Salal", "correcta": false }
         ],
-        "imatge": "/images/doha.jpg"
+        "imatge": "/images/doha.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 70,
@@ -776,7 +797,9 @@ let preguntas = [
             { "resposta": "Cantón", "correcta": false },
             { "resposta": "Shenzhen", "correcta": false }
         ],
-        "imatge": "/images/pekin.jpg"
+        "imatge": "/images/pekin.jpg",
+        "continente": "Asia",
+        "dificultad": 1
     },
     {
         "id": 71,
@@ -787,7 +810,9 @@ let preguntas = [
             { "resposta": "Hawalli", "correcta": false },
             { "resposta": "Jahra", "correcta": false }
         ],
-        "imatge": "/images/kuwait_city.jpg"
+        "imatge": "/images/kuwait_city.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 72,
@@ -798,7 +823,9 @@ let preguntas = [
             { "resposta": "Lárnaca", "correcta": false },
             { "resposta": "Pafos", "correcta": false }
         ],
-        "imatge": "/images/nicosia.jpg"
+        "imatge": "/images/nicosia.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 73,
@@ -809,7 +836,9 @@ let preguntas = [
             { "resposta": "Izmir", "correcta": false },
             { "resposta": "Antalya", "correcta": false }
         ],
-        "imatge": "/images/ankara.jpg"
+        "imatge": "/images/ankara.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 74,
@@ -820,7 +849,9 @@ let preguntas = [
             { "resposta": "Sinuiju", "correcta": false },
             { "resposta": "Wonsan", "correcta": false }
         ],
-        "imatge": "/images/pyongyang.jpg"
+        "imatge": "/images/pyongyang.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 75,
@@ -831,7 +862,9 @@ let preguntas = [
             { "resposta": "Giza", "correcta": false },
             { "resposta": "Luxor", "correcta": false }
         ],
-        "imatge": "/images/cairo.jpg"
+        "imatge": "/images/cairo.jpg",
+        "continente": "África",
+        "dificultad": 2
     },
     {
         "id": 76,
@@ -842,7 +875,9 @@ let preguntas = [
             { "resposta": "Misurata", "correcta": false },
             { "resposta": "Sabha", "correcta": false }
         ],
-        "imatge": "/images/tripoli.jpg"
+        "imatge": "/images/tripoli.jpg",
+        "continente": "África",
+        "dificultad": 2
     },
     {
         "id": 77,
@@ -853,7 +888,9 @@ let preguntas = [
             { "resposta": "Incheon", "correcta": false },
             { "resposta": "Suwon", "correcta": false }
         ],
-        "imatge": "/images/seul.jpg"
+        "imatge": "/images/seul.jpg",
+        "continente": "Asia",
+        "dificultad": 1
     },
     {
         "id": 78,
@@ -864,7 +901,9 @@ let preguntas = [
             { "resposta": "Da Nang", "correcta": false },
             { "resposta": "Nha Trang", "correcta": false }
         ],
-        "imatge": "/images/hanoi.jpg"
+        "imatge": "/images/hanoi.jpg",
+        "continente": "Asia",
+        "dificultad": 1
     },
     {
         "id": 79,
@@ -875,7 +914,9 @@ let preguntas = [
             { "resposta": "Pattaya", "correcta": false },
             { "resposta": "Phuket", "correcta": false }
         ],
-        "imatge": "/images/bangkok.jpg"
+        "imatge": "/images/bangkok.jpg",
+        "continente": "Asia",
+        "dificultad": 1
     },
     {
         "id": 80,
@@ -886,7 +927,9 @@ let preguntas = [
             { "resposta": "Novosibirsk", "correcta": false },
             { "resposta": "Ekaterimburgo", "correcta": false }
         ],
-        "imatge": "/images/moscu.jpg"
+        "imatge": "/images/moscu.jpg",
+        "continente": "Europa",
+        "dificultad": 2
     },
     {
         "id": 81,
@@ -897,7 +940,9 @@ let preguntas = [
             { "resposta": "Hafnarfjörður", "correcta": false },
             { "resposta": "Keflavík", "correcta": false }
         ],
-        "imatge": "/images/reikiavik.jpg"
+        "imatge": "/images/reikiavik.jpg",
+        "continente": "Europa",
+        "dificultad": 1
     },
     {
         "id": 82,
@@ -908,7 +953,9 @@ let preguntas = [
             { "resposta": "Nakuru", "correcta": false },
             { "resposta": "Kisumu", "correcta": false }
         ],
-        "imatge": "/images/nairobi.jpg"
+        "imatge": "/images/nairobi.jpg",
+        "continente": "África",
+        "dificultad": 1
     },
     {
         "id": 83,
@@ -919,7 +966,9 @@ let preguntas = [
             { "resposta": "Bandung", "correcta": false },
             { "resposta": "Denpasar", "correcta": false }
         ],
-        "imatge": "/images/yakarta.jpg"
+        "imatge": "/images/yakarta.jpg",
+        "continente": "Asia",
+        "dificultad": 1
     },
     {
         "id": 84,
@@ -930,7 +979,9 @@ let preguntas = [
             { "resposta": "Johor Bahru", "correcta": false },
             { "resposta": "Kota Bharu", "correcta": false }
         ],
-        "imatge": "/images/kuala_lumpur.jpg"
+        "imatge": "/images/kuala_lumpur.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 85,
@@ -941,7 +992,9 @@ let preguntas = [
             { "resposta": "Tainan", "correcta": false },
             { "resposta": "Taichung", "correcta": false }
         ],
-        "imatge": "/images/taipei.jpg"
+        "imatge": "/images/taipei.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 86,
@@ -952,7 +1005,9 @@ let preguntas = [
             { "resposta": "Darkhan", "correcta": false },
             { "resposta": "Ölgii", "correcta": false }
         ],
-        "imatge": "/images/ulan_bator.jpg"
+        "imatge": "/images/ulan_bator.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 87,
@@ -963,7 +1018,9 @@ let preguntas = [
             { "resposta": "Kitwe", "correcta": false },
             { "resposta": "Livingstone", "correcta": false }
         ],
-        "imatge": "/images/lusaka.jpg"
+        "imatge": "/images/lusaka.jpg",
+        "continente": "África",
+        "dificultad": 1
     },
     {
         "id": 88,
@@ -974,7 +1031,9 @@ let preguntas = [
             { "resposta": "Jurong", "correcta": false },
             { "resposta": "Punggol", "correcta": false }
         ],
-        "imatge": "/images/singapur.jpg"
+        "imatge": "/images/singapur.jpg",
+        "continente": "Asia",
+        "dificultad": 2
     },
     {
         "id": 89,
@@ -985,7 +1044,9 @@ let preguntas = [
             { "resposta": "Maun", "correcta": false },
             { "resposta": "Kasane", "correcta": false }
         ],
-        "imatge": "/images/gaborone.jpg"
+        "imatge": "/images/gaborone.jpg",
+        "continente": "África",
+        "dificultad": 1
     },
     {
         "id": 90,
@@ -996,7 +1057,9 @@ let preguntas = [
             { "resposta": "Christchurch", "correcta": false },
             { "resposta": "Hamilton", "correcta": false }
         ],
-        "imatge": "/images/wellington.jpg"
+        "imatge": "/images/wellington.jpg",
+        "continente": "Oceanía",
+        "dificultad": 2
     },
     {
         "id": 91,
@@ -1007,7 +1070,9 @@ let preguntas = [
             { "resposta": "Huambo", "correcta": false },
             { "resposta": "Lubango", "correcta": false }
         ],
-        "imatge": "/images/luanda.jpg"
+        "imatge": "/images/luanda.jpg",
+        "continente": "África",
+        "dificultad": 1
     },
     {
         "id": 92,
@@ -1018,7 +1083,9 @@ let preguntas = [
             { "resposta": "Nampula", "correcta": false },
             { "resposta": "Tete", "correcta": false }
         ],
-        "imatge": "/images/maputo.jpg"
+        "imatge": "/images/maputo.jpg",
+        "continente": "África",
+        "dificultad": 1
     },
     {
         "id": 93,
@@ -1029,7 +1096,9 @@ let preguntas = [
             { "resposta": "Mahajanga", "correcta": false },
             { "resposta": "Fianarantsoa", "correcta": false }
         ],
-        "imatge": "/images/antantanarivo.jpg"
+        "imatge": "/images/antantanarivo.jpg",
+        "continente": "África",
+        "dificultad": 1
     },
     {
         "id": 94,
@@ -1040,7 +1109,9 @@ let preguntas = [
             { "resposta": "Ciudad del Cabo", "correcta": false },
             { "resposta": "Durban", "correcta": false }
         ],
-        "imatge": "/images/pretoria.jpg"
+        "imatge": "/images/pretoria.jpg",
+        "continente": "África",
+        "dificultad": 2
     },
     {
         "id": 95,
@@ -1051,7 +1122,9 @@ let preguntas = [
             { "resposta": "Marrakech", "correcta": false },
             { "resposta": "Fez", "correcta": false }
         ],
-        "imatge": "/images/rabat.jpg"
+        "imatge": "/images/rabat.jpg",
+        "continente": "África",
+        "dificultad": 1
     },
     {
         "id": 96,
@@ -1062,7 +1135,9 @@ let preguntas = [
             { "resposta": "Constantina", "correcta": false },
             { "resposta": "Annaba", "correcta": false }
         ],
-        "imatge": "/images/argel.jpg"
+        "imatge": "/images/argel.jpg",
+        "continente": "África",
+        "dificultad": 1
     },
     {
         "id": 97,
@@ -1073,7 +1148,9 @@ let preguntas = [
             { "resposta": "Susa", "correcta": false },
             { "resposta": "Kairuán", "correcta": false }
         ],
-        "imatge": "/images/tunez.jpg"
+        "imatge": "/images/tunez.jpg",
+        "continente": "África",
+        "dificultad": 1
     },
     {
         "id": 98,
@@ -1084,7 +1161,9 @@ let preguntas = [
             { "resposta": "Thiès", "correcta": false },
             { "resposta": "Ziguinchor", "correcta": false }
         ],
-        "imatge": "/images/dakar.jpg"
+        "imatge": "/images/dakar.jpg",
+        "continente": "África",
+        "dificultad": 1
     },
     {
         "id": 99,
@@ -1095,7 +1174,9 @@ let preguntas = [
             { "resposta": "Tamale", "correcta": false },
             { "resposta": "Takoradi", "correcta": false }
         ],
-        "imatge": "/images/acra.jpg"
+        "imatge": "/images/acra.jpg",
+        "continente": "África",
+        "dificultad": 2
     },
     {
         "id": 100,
@@ -1106,7 +1187,9 @@ let preguntas = [
             { "resposta": "Bouaké", "correcta": false },
             { "resposta": "San Pedro", "correcta": false }
         ],
-        "imatge": "/images/yamusukro.jpg"
+        "imatge": "/images/yamusukro.jpg",
+        "continente": "África",
+        "dificultad": 2
     },
     {
         "id": 101,
@@ -1117,7 +1200,9 @@ let preguntas = [
             { "resposta": "Los Ángeles", "correcta": false },
             { "resposta": "Chicago", "correcta": false }
         ],
-        "imatge": "/images/washington.jpg"
+        "imatge": "/images/washington.jpg",
+        "continente": "América del Norte",
+        "dificultad": 1
     },
     {
         "id": 102,
@@ -1128,7 +1213,9 @@ let preguntas = [
             { "resposta": "Monterrey", "correcta": false },
             { "resposta": "Cancún", "correcta": false }
         ],
-        "imatge": "/images/cdmx.jpg"
+        "imatge": "/images/cdmx.jpg",
+        "continente": "América del Norte",
+        "dificultad": 1
     },
     {
         "id": 103,
@@ -1139,7 +1226,9 @@ let preguntas = [
             { "resposta": "La Massana", "correcta": false },
             { "resposta": "Ordino", "correcta": false }
         ],
-        "imatge": "/images/andorra.jpg"
+        "imatge": "/images/andorra.jpg",
+        "continente": "Europa",
+        "dificultad": 3
     },
     {
         "id": 104,
@@ -1150,7 +1239,9 @@ let preguntas = [
             { "resposta": "Kano", "correcta": false },
             { "resposta": "Ibadan", "correcta": false }
         ],
-        "imatge": "/images/abuja.jpg"
+        "imatge": "/images/abuja.jpg",
+        "continente": "África",
+        "dificultad": 2
     },
     {
         "id": 105,
@@ -1161,7 +1252,9 @@ let preguntas = [
             { "resposta": "Goma", "correcta": false },
             { "resposta": "Mbuji-Mayi", "correcta": false }
         ],
-        "imatge": "/images/kinshasa.jpg"
+        "imatge": "/images/kinshasa.jpg",
+        "continente": "África",
+        "dificultad": 2
     },
     {
         "id": 106,
@@ -1172,7 +1265,9 @@ let preguntas = [
             { "resposta": "Camagüey", "correcta": false },
             { "resposta": "Holguín", "correcta": false }
         ],
-        "imatge": "/images/lahabana.jpg"
+        "imatge": "/images/lahabana.jpg",
+        "continente": "América del Norte",
+        "dificultad": 1
     },
     {
         "id": 107,
@@ -1183,7 +1278,9 @@ let preguntas = [
             { "resposta": "Quetzaltenango", "correcta": false },
             { "resposta": "Escuintla", "correcta": false }
         ],
-        "imatge": "/images/guatemala.jpg"
+        "imatge": "/images/guatemala.jpg",
+        "continente": "América Central",
+        "dificultad": 2
     },
     {
         "id": 108,
@@ -1194,7 +1291,9 @@ let preguntas = [
             { "resposta": "La Ceiba", "correcta": false },
             { "resposta": "Comayagua", "correcta": false }
         ],
-        "imatge": "/images/tegucigalpa.jpg"
+        "imatge": "/images/tegucigalpa.jpg",
+        "continente": "América Central",
+        "dificultad": 2
     },
     {
         "id": 109,
@@ -1205,7 +1304,9 @@ let preguntas = [
             { "resposta": "San Miguel", "correcta": false },
             { "resposta": "Sonsonate", "correcta": false }
         ],
-        "imatge": "/images/sansalvador.jpg"
+        "imatge": "/images/sansalvador.jpg",
+        "continente": "América Central",
+        "dificultad": 2
     },
     {
         "id": 110,
@@ -1216,7 +1317,9 @@ let preguntas = [
             { "resposta": "Cartago", "correcta": false },
             { "resposta": "Heredia", "correcta": false }
         ],
-        "imatge": "/images/sanjose.jpg"
+        "imatge": "/images/sanjose.jpg",
+        "continente": "América Central",
+        "dificultad": 2
     },
     {
         "id": 111,
@@ -1227,7 +1330,9 @@ let preguntas = [
             { "resposta": "David", "correcta": false },
             { "resposta": "Santiago", "correcta": false }
         ],
-        "imatge": "/images/panama.jpg"
+        "imatge": "/images/panama.jpg",
+        "continente": "América Central",
+        "dificultad": 2
     },
     {
         "id": 112,
@@ -1238,7 +1343,9 @@ let preguntas = [
             { "resposta": "La Vega", "correcta": false },
             { "resposta": "San Pedro de Macorís", "correcta": false }
         ],
-        "imatge": "/images/santodomingo.jpg"
+        "imatge": "/images/santodomingo.jpg",
+        "continente": "América Central",
+        "dificultad": 1
     },
     {
         "id": 113,
@@ -1249,7 +1356,9 @@ let preguntas = [
             { "resposta": "Khulna", "correcta": false },
             { "resposta": "Rajshahi", "correcta": false }
         ],
-        "imatge": "/images/daca.jpg"
+        "imatge": "/images/daca.jpg",
+        "continente": "Asia",
+        "dificultad": 1
     },
     {
         "id": 114,
@@ -1260,7 +1369,9 @@ let preguntas = [
             { "resposta": "Pakse", "correcta": false },
             { "resposta": "Savannakhet", "correcta": false }
         ],
-        "imatge": "/images/vientian.jpg"
+        "imatge": "/images/vientian.jpg",
+        "continente": "Asia",
+        "dificultad": 1
     },
     {
         "id": 115,
@@ -1271,10 +1382,12 @@ let preguntas = [
             { "resposta": "Dávao", "correcta": false },
             { "resposta": "Quezón", "correcta": false }
         ],
-        "imatge": "/images/manila.jpg"
+        "imatge": "/images/manila.jpg",
+        "continente": "Asia",
+        "dificultad": 1
     },
     {
-        "id": 117,
+        "id": 116,
         "pregunta": "¿Cuál es la capital de Brunei?",
         "opcions": [
             { "resposta": "Bandar Seri Begawan", "correcta": true },
@@ -1282,10 +1395,12 @@ let preguntas = [
             { "resposta": "Tutong", "correcta": false },
             { "resposta": "Seria", "correcta": false }
         ],
-        "imatge": "/images/brunei.jpg"
+        "imatge": "/images/brunei.jpg",
+        "continente": "Asia",
+        "dificultad": 1
     },
     {
-        "id": 118,
+        "id": 117,
         "pregunta": "¿Cuál es la capital de Nepal?",
         "opcions": [
             { "resposta": "Katmandú", "correcta": true },
@@ -1293,10 +1408,12 @@ let preguntas = [
             { "resposta": "Lalitpur", "correcta": false },
             { "resposta": "Biratnagar", "correcta": false }
         ],
-        "imatge": "/images/katmandu.jpg"
+        "imatge": "/images/katmandu.jpg",
+        "continente": "Asia",
+        "dificultad": 1
     },
     {
-        "id": 119,
+        "id": 118,
         "pregunta": "¿Cuál es la capital de Bután?",
         "opcions": [
             { "resposta": "Thimphu", "correcta": true },
@@ -1304,10 +1421,12 @@ let preguntas = [
             { "resposta": "Punakha", "correcta": false },
             { "resposta": "Trongsa", "correcta": false }
         ],
-        "imatge": "/images/thimphu.jpg"
+        "imatge": "/images/thimphu.jpg",
+        "continente": "Asia",
+        "dificultad": 1
     },
     {
-        "id": 120,
+        "id": 119,
         "pregunta": "¿Cuál es la capital de Escocia?",
         "opcions": [
             { "resposta": "Edimburgo", "correcta": true },
@@ -1315,10 +1434,12 @@ let preguntas = [
             { "resposta": "Aberdeen", "correcta": false },
             { "resposta": "Dundee", "correcta": false }
         ],
-        "imatge": "/images/edimburgo.jpg"
+        "imatge": "/images/edimburgo.jpg",
+        "continente": "Europa",
+        "dificultad": 1
     },
     {
-        "id": 121,
+        "id": 120,
         "pregunta": "¿Cuál es la capital de Luxemburgo?",
         "opcions": [
             { "resposta": "Luxemburgo", "correcta": true },
@@ -1326,10 +1447,12 @@ let preguntas = [
             { "resposta": "Differdange", "correcta": false },
             { "resposta": "Dudelange", "correcta": false }
         ],
-        "imatge": "/images/luxemburgo.jpg"
+        "imatge": "/images/luxemburgo.jpg",
+        "continente": "Europa",
+        "dificultad": 1
     },
     {
-        "id": 122,
+        "id": 121,
         "pregunta": "¿Cuál es la capital de Gales?",
         "opcions": [
             { "resposta": "Cardiff", "correcta": true },
@@ -1337,10 +1460,12 @@ let preguntas = [
             { "resposta": "Newport", "correcta": false },
             { "resposta": "Bangor", "correcta": false }
         ],
-        "imatge": "/images/cardiff.jpg"
+        "imatge": "/images/cardiff.jpg",
+        "continente": "Europa",
+        "dificultad": 1
     },
     {
-        "id": 123,
+        "id": 122,
         "pregunta": "¿Cuál es la capital de Irlanda del Norte?",
         "opcions": [
             { "resposta": "Belfast", "correcta": true },
@@ -1348,7 +1473,9 @@ let preguntas = [
             { "resposta": "Lisburn", "correcta": false },
             { "resposta": "Newry", "correcta": false }
         ],
-        "imatge": "/images/belfast.jpg"
+        "imatge": "/images/belfast.jpg",
+        "continente": "Europa",
+        "dificultad": 1
     }
 ];
 
@@ -1366,15 +1493,16 @@ app.get('/preguntas/:id', (req, res) => {
 });
 
 app.post('/preguntas', (req, res) => {
-    const { pregunta, opcions, imatge } = req.body;
-    if (!pregunta || !Array.isArray(opcions) || opcions.length === 0 || !imatge) {
+    const { pregunta, opcions, imatge, continente, dificultad } = req.body;
+    if (!pregunta || !Array.isArray(opcions) || opcions.length === 0 || !imatge || !continente || typeof dificultad !== 'number') {
         return res.status(400).json({ error: 'Invalid input format' });
     }
     const id = preguntas.length > 0 ? preguntas[preguntas.length - 1].id + 1 : 1;
-    const nuevaPregunta = { id, pregunta, opcions, imatge };
+    const nuevaPregunta = { id, pregunta, opcions, imatge, continente, dificultad };
     preguntas.push(nuevaPregunta);
     res.json(nuevaPregunta);
 });
+
 
 app.put('/preguntas/:id', (req, res) => {
     const index = preguntas.findIndex(p => p.id === parseInt(req.params.id));

@@ -21,7 +21,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/madrid.jpg"
+            "imatge": "/images/madrid.jpg",
+            "continente": "Europa",
+            "dificultat": 1
         },
         {
             "id": 2,
@@ -44,7 +46,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/paris.jpg"
+            "imatge": "/images/paris.jpg",
+            "continente": "Europa",
+            "dificultat": 1
         },
         {
             "id": 3,
@@ -67,7 +71,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/berlin.jpg"
+            "imatge": "/images/berlin.jpg",
+            "continente": "Europa",
+            "dificultat": 1
         },
         {
             "id": 4,
@@ -90,7 +96,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/roma.jpg"
+            "imatge": "/images/roma.jpg",
+            "continente": "Europa",
+            "dificultat": 1
         },
         {
             "id": 5,
@@ -113,7 +121,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/lisboa.jpg"
+            "imatge": "/images/lisboa.jpg",
+            "continente": "Europa",
+            "dificultat": 1
         },
         {
             "id": 6,
@@ -136,7 +146,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/londres.jpg"
+            "imatge": "/images/londres.jpg",
+            "continente": "Europa",
+            "dificultat": 1
         },
         {
             "id": 7,
@@ -159,7 +171,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/ottawa.jpg"
+            "imatge": "/images/ottawa.jpg",
+            "continente": "América del Norte",
+            "dificultat": 2
         },
         {
             "id": 8,
@@ -182,7 +196,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/canberra.jpg"
+            "imatge": "/images/canberra.jpg",
+            "continente": "Oceanía",
+            "dificultat": 2
         },
         {
             "id": 9,
@@ -205,7 +221,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/brasilia.jpg"
+            "imatge": "/images/brasilia.jpg",
+            "continente": "América del Sur",
+            "dificultat": 2
         },
         {
             "id": 10,
@@ -228,7 +246,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/buenos_aires.jpg"
+            "imatge": "/images/buenos_aires.jpg",
+            "continente": "América del Sur",
+            "dificultat": 2
         },
         {
             "id": 11,
@@ -251,7 +271,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/santiago.jpg"
+            "imatge": "/images/santiago.jpg",
+            "continente": "América del Sur",
+            "dificultat": 2
         },
         {
             "id": 12,
@@ -274,7 +296,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/bogota.jpg"
+            "imatge": "/images/bogota.jpg",
+            "continente": "América del Sur",
+            "dificultat": 2
         },
         {
             "id": 13,
@@ -297,7 +321,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/lima.jpg"
+            "imatge": "/images/lima.jpg",
+            "continente": "América del Sur",
+            "dificultat": 2
         },
         {
             "id": 14,
@@ -320,7 +346,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/caracas.jpg"
+            "imatge": "/images/caracas.jpg",
+            "continente": "América del Sur",
+            "dificultad": 2
         },
         {
             "id": 15,
@@ -343,7 +371,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/montevideo.jpg"
+            "imatge": "/images/montevideo.jpg",
+            "continente": "América del Sur",
+            "dificultad": 2
         },
         {
             "id": 16,
@@ -366,7 +396,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/asuncion.jpg"
+            "imatge": "/images/asuncion.jpg",
+            "continente": "América del Sur",
+            "dificultad": 2
         },
         {
             "id": 17,
@@ -389,7 +421,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/la_paz.jpg"
+            "imatge": "/images/la_paz.jpg",
+            "continente": "América del Sur",
+            "dificultad": 2
         },
         {
             "id": 18,
@@ -412,7 +446,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/quito.jpg"
+            "imatge": "/images/quito.jpg",
+            "continente": "América del Sur",
+            "dificultad": 2
         },
         {
             "id": 19,
@@ -435,7 +471,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/atenas.jpg"
+            "imatge": "/images/atenas.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 20,
@@ -458,7 +496,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/estocolmo.jpg"
+            "imatge": "/images/estocolmo.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 21,
@@ -481,7 +521,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/oslo.jpg"
+            "imatge": "/images/oslo.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 22,
@@ -504,7 +546,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/helsinki.jpg"
+            "imatge": "/images/helsinki.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 23,
@@ -527,7 +571,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/copenhague.jpg"
+            "imatge": "/images/copenhague.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 24,
@@ -550,7 +596,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/berna.jpg"
+            "imatge": "/images/berna.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 25,
@@ -573,7 +621,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/viena.jpg"
+            "imatge": "/images/viena.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 26,
@@ -596,7 +646,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/bruselas.jpg"
+            "imatge": "/images/bruselas.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 27,
@@ -619,7 +671,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/amsterdam.jpg"
+            "imatge": "/images/amsterdam.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 28,
@@ -642,7 +696,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/dublin.jpg"
+            "imatge": "/images/dublin.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 29,
@@ -665,7 +721,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/varsovia.jpg"
+            "imatge": "/images/varsovia.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 30,
@@ -688,7 +746,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/budapest.jpg"
+            "imatge": "/images/budapest.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 31,
@@ -711,7 +771,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/praga.jpg"
+            "imatge": "/images/praga.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 32,
@@ -734,7 +796,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/bratislava.jpg"
+            "imatge": "/images/bratislava.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 33,
@@ -757,7 +821,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/zagreb.jpg"
+            "imatge": "/images/zagreb.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 34,
@@ -780,7 +846,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/liubliana.jpg"
+            "imatge": "/images/liubliana.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 35,
@@ -803,7 +871,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/bucarest.jpg"
+            "imatge": "/images/bucarest.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 36,
@@ -826,7 +896,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/sofia.jpg"
+            "imatge": "/images/sofia.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 37,
@@ -849,7 +921,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/belgrado.jpg"
+            "imatge": "/images/belgrado.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 38,
@@ -872,7 +946,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/sarajevo.jpg"
+            "imatge": "/images/sarajevo.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 39,
@@ -895,7 +971,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/skopie.jpg"
+            "imatge": "/images/skopie.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 40,
@@ -918,7 +996,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/tirana.jpg"
+            "imatge": "/images/tirana.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 41,
@@ -941,7 +1021,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/podgorica.jpg"
+            "imatge": "/images/podgorica.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 42,
@@ -964,7 +1046,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/pristina.jpg"
+            "imatge": "/images/pristina.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 43,
@@ -987,7 +1071,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/kiev.jpg"
+            "imatge": "/images/kiev.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 44,
@@ -1010,7 +1096,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/minsk.jpg"
+            "imatge": "/images/minsk.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 45,
@@ -1033,7 +1121,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/riga.jpg"
+            "imatge": "/images/riga.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 46,
@@ -1056,7 +1146,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/vilna.jpg"
+            "imatge": "/images/vilna.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 47,
@@ -1079,7 +1171,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/tallin.jpg"
+            "imatge": "/images/tallin.jpg",
+            "continente": "Europa",
+            "dificultad": 2
         },
         {
             "id": 48,
@@ -1102,7 +1196,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/chisinau.jpg"
+            "imatge": "/images/chisinau.jpg",
+            "continente": "Europa",
+            "dificultad": 3
         },
         {
             "id": 49,
@@ -1125,7 +1221,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/erevan.jpg"
+            "imatge": "/images/erevan.jpg",
+            "continente": "Asia",
+            "dificultad": 3
         },
         {
             "id": 50,
@@ -1148,7 +1246,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/tiflis.jpg"
+            "imatge": "/images/tiflis.jpg",
+            "continente": "Asia",
+            "dificultad": 3
         },
         {
             "id": 51,
@@ -1171,7 +1271,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/baku.jpg"
+            "imatge": "/images/baku.jpg",
+            "continente": "Asia",
+            "dificultad": 3
         },
         {
             "id": 52,
@@ -1194,7 +1296,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/astana.jpg"
+            "imatge": "/images/astana.jpg",
+            "continente": "Asia",
+            "dificultad": 3
         },
         {
             "id": 53,
@@ -1217,7 +1321,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/tashkent.jpg"
+            "imatge": "/images/tashkent.jpg",
+            "continente": "Asia",
+            "dificultat": 2
         },
         {
             "id": 54,
@@ -1240,7 +1346,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/ashgabat.jpg"
+            "imatge": "/images/ashgabat.jpg",
+            "continente": "Asia",
+            "dificultat": 3
         },
         {
             "id": 55,
@@ -1263,7 +1371,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/biskek.jpg"
+            "imatge": "/images/biskek.jpg",
+            "continente": "Asia",
+            "dificultat": 3
         },
         {
             "id": 56,
@@ -1286,7 +1396,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/dusambe.jpg"
+            "imatge": "/images/dusambe.jpg",
+            "continente": "Asia",
+            "dificultat": 3
         },
         {
             "id": 57,
@@ -1309,7 +1421,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/kabul.jpg"
+            "imatge": "/images/kabul.jpg",
+            "continente": "Asia",
+            "dificultat": 2
         },
         {
             "id": 58,
@@ -1332,7 +1446,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/islamabad.jpg"
+            "imatge": "/images/islamabad.jpg",
+            "continente": "Asia",
+            "dificultat": 2
         },
         {
             "id": 59,
@@ -1355,7 +1471,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/teheran.jpg"
+            "imatge": "/images/teheran.jpg",
+            "continente": "Asia",
+            "dificultat": 1
         },
         {
             "id": 60,
@@ -1378,7 +1496,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/bagdad.jpg"
+            "imatge": "/images/bagdad.jpg",
+            "continente": "Asia",
+            "dificultat": 2
         },
         {
             "id": 61,
@@ -1401,7 +1521,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/damasco.jpg"
+            "imatge": "/images/damasco.jpg",
+            "continente": "Asia",
+            "dificultat": 1
         },
         {
             "id": 62,
@@ -1424,7 +1546,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/beirut.jpg"
+            "imatge": "/images/beirut.jpg",
+            "continente": "Asia",
+            "dificultat": 1
         },
         {
             "id": 63,
@@ -1447,7 +1571,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/aman.jpg"
+            "imatge": "/images/aman.jpg",
+            "continente": "Asia",
+            "dificultat": 2
         },
         {
             "id": 64,
@@ -1470,7 +1596,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/jerusalen.jpg"
+            "imatge": "/images/jerusalen.jpg",
+            "continente": "Asia",
+            "dificultat": 1
         },
         {
             "id": 65,
@@ -1493,7 +1621,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/riad.jpg"
+            "imatge": "/images/riad.jpg",
+            "continente": "Asia",
+            "dificultat": 1
         },
         {
             "id": 66,
@@ -1516,7 +1646,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/abu_dabi.jpg"
+            "imatge": "/images/abu_dabi.jpg",
+            "continente": "Asia",
+            "dificultat": 2
         },
         {
             "id": 67,
@@ -1539,7 +1671,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/tokio.jpg"
+            "imatge": "/images/tokio.jpg",
+            "continente": "Asia",
+            "dificultat": 2
         },
         {
             "id": 68,
@@ -1562,7 +1696,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/mascate.jpg"
+            "imatge": "/images/mascate.jpg",
+            "continente": "Asia",
+            "dificultat": 3
         },
         {
             "id": 69,
@@ -1585,7 +1721,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/doha.jpg"
+            "imatge": "/images/doha.jpg",
+            "continente": "Asia",
+            "dificultat": 2
         },
         {
             "id": 70,
@@ -1608,7 +1746,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/pekin.jpg"
+            "imatge": "/images/pekin.jpg",
+            "continente": "Asia",
+            "dificultat": 1
         },
         {
             "id": 71,
@@ -1631,7 +1771,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/kuwait_city.jpg"
+            "imatge": "/images/kuwait_city.jpg",
+            "continente": "Asia",
+            "dificultat": 3
         },
         {
             "id": 72,
@@ -1654,7 +1796,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/nicosia.jpg"
+            "imatge": "/images/nicosia.jpg",
+            "continente": "Asia",
+            "dificultat": 3
         },
         {
             "id": 73,
@@ -1677,7 +1821,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/ankara.jpg"
+            "imatge": "/images/ankara.jpg",
+            "continente": "Asia",
+            "dificultat": 2
         },
         {
             "id": 74,
@@ -1700,7 +1846,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/pyongyang.jpg"
+            "imatge": "/images/pyongyang.jpg",
+            "continente": "Asia",
+            "dificultat": 3
         },
         {
             "id": 75,
@@ -1723,7 +1871,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/cairo.jpg"
+            "imatge": "/images/cairo.jpg",
+            "continente": "África",
+            "dificultat": 1
         },
         {
             "id": 76,
@@ -1746,7 +1896,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/tripoli.jpg"
+            "imatge": "/images/tripoli.jpg",
+            "continente": "África",
+            "dificultat": 3
         },
         {
             "id": 77,
@@ -1769,7 +1921,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/seul.jpg"
+            "imatge": "/images/seul.jpg",
+            "continente": "Asia",
+            "dificultat": 2
         },
         {
             "id": 78,
@@ -1792,7 +1946,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/hanoi.jpg"
+            "imatge": "/images/hanoi.jpg",
+            "continente": "Asia",
+            "dificultat": 2
         },
         {
             "id": 79,
@@ -1815,7 +1971,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/bangkok.jpg"
+            "imatge": "/images/bangkok.jpg",
+            "continente": "Asia",
+            "dificultat": 2
         },
         {
             "id": 80,
@@ -1838,7 +1996,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/moscu.jpg"
+            "imatge": "/images/moscu.jpg",
+            "continente": "Europa",
+            "dificultat": 2
         },
         {
             "id": 81,
@@ -1861,7 +2021,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/reikiavik.jpg"
+            "imatge": "/images/reikiavik.jpg",
+            "continente": "Europa",
+            "dificultat": 3
         },
         {
             "id": 82,
@@ -1884,7 +2046,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/nairobi.jpg"
+            "imatge": "/images/nairobi.jpg",
+            "continente": "África",
+            "dificultat": 2
         },
         {
             "id": 83,
@@ -1907,7 +2071,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/yakarta.jpg"
+            "imatge": "/images/yakarta.jpg",
+            "continente": "Asia",
+            "dificultat": 2
         },
         {
             "id": 84,
@@ -1930,7 +2096,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/kuala_lumpur.jpg"
+            "imatge": "/images/kuala_lumpur.jpg",
+            "continente": "Asia",
+            "dificultat": 2
         },
         {
             "id": 85,
@@ -1953,7 +2121,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/taipei.jpg"
+            "imatge": "/images/taipei.jpg",
+            "continente": "Asia",
+            "dificultat": 2
         },
         {
             "id": 86,
@@ -1976,7 +2146,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/ulan_bator.jpg"
+            "imatge": "/images/ulan_bator.jpg",
+            "continente": "Asia",
+            "dificultat": 3
         },
         {
             "id": 87,
@@ -1999,7 +2171,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/lusaka.jpg"
+            "imatge": "/images/lusaka.jpg",
+            "continente": "África",
+            "dificultat": 2
         },
         {
             "id": 88,
@@ -2022,7 +2196,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/singapur.jpg"
+            "imatge": "/images/singapur.jpg",
+            "continente": "Asia",
+            "dificultat": 1
         },
         {
             "id": 89,
@@ -2045,7 +2221,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/gaborone.jpg"
+            "imatge": "/images/gaborone.jpg",
+            "continente": "África",
+            "dificultat": 2
         },
         {
             "id": 90,
@@ -2068,7 +2246,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/wellington.jpg"
+            "imatge": "/images/wellington.jpg",
+            "continente": "Oceanía",
+            "dificultat": 2
         },
         {
             "id": 91,
@@ -2091,7 +2271,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/luanda.jpg"
+            "imatge": "/images/luanda.jpg",
+            "continente": "África",
+            "dificultat": 2
         },
         {
             "id": 92,
@@ -2114,7 +2296,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/maputo.jpg"
+            "imatge": "/images/maputo.jpg",
+            "continente": "África",
+            "dificultat": 2
         },
         {
             "id": 93,
@@ -2137,7 +2321,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/antantanarivo.jpg"
+            "imatge": "/images/antantanarivo.jpg",
+            "continente": "África",
+            "dificultat": 2
         },
         {
             "id": 94,
@@ -2160,7 +2346,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/pretoria.jpg"
+            "imatge": "/images/pretoria.jpg",
+            "continente": "África",
+            "dificultat": 3
         },
         {
             "id": 95,
@@ -2183,7 +2371,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/rabat.jpg"
+            "imatge": "/images/rabat.jpg",
+            "continente": "África",
+            "dificultat": 2
         },
         {
             "id": 96,
@@ -2206,7 +2396,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/argel.jpg"
+            "imatge": "/images/argel.jpg",
+            "continente": "África",
+            "dificultat": 2
         },
         {
             "id": 97,
@@ -2229,7 +2421,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/tunez.jpg"
+            "imatge": "/images/tunez.jpg",
+            "continente": "África",
+            "dificultat": 2
         },
         {
             "id": 98,
@@ -2252,7 +2446,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/dakar.jpg"
+            "imatge": "/images/dakar.jpg",
+            "continente": "África",
+            "dificultat": 2
         },
         {
             "id": 99,
@@ -2275,7 +2471,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/acra.jpg"
+            "imatge": "/images/acra.jpg",
+            "continente": "África",
+            "dificultat": 2
         },
         {
             "id": 100,
@@ -2298,7 +2496,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/yamusukro.jpg"
+            "imatge": "/images/yamusukro.jpg",
+            "continente": "África",
+            "dificultat": 3
         },
         {
             "id": 101,
@@ -2321,7 +2521,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/washington.jpg"
+            "imatge": "/images/washington.jpg",
+            "continente": "América",
+            "dificultat": 1
         },
         {
             "id": 102,
@@ -2344,7 +2546,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/cdmx.jpg"
+            "imatge": "/images/cdmx.jpg",
+            "continente": "América",
+            "dificultat": 1
         },
         {
             "id": 103,
@@ -2367,7 +2571,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/andorra.jpg"
+            "imatge": "/images/andorra.jpg",
+            "continente": "Europa",
+            "dificultat": 2
         },
         {
             "id": 104,
@@ -2390,7 +2596,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/abuja.jpg"
+            "imatge": "/images/abuja.jpg",
+            "continente": "África",
+            "dificultat": 2
         },
         {
             "id": 105,
@@ -2413,7 +2621,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/kinshasa.jpg"
+            "imatge": "/images/kinshasa.jpg",
+            "continente": "África",
+            "dificultad": 2
         },
         {
             "id": 106,
@@ -2436,7 +2646,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/lahabana.jpg"
+            "imatge": "/images/lahabana.jpg",
+            "continente": "América",
+            "dificultad": 1
         },
         {
             "id": 107,
@@ -2459,7 +2671,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/guatemala.jpg"
+            "imatge": "/images/guatemala.jpg",
+            "continente": "América",
+            "dificultad": 1
         },
         {
             "id": 108,
@@ -2482,7 +2696,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/tegucigalpa.jpg"
+            "imatge": "/images/tegucigalpa.jpg",
+            "continente": "América",
+            "dificultad": 1
         },
         {
             "id": 109,
@@ -2505,7 +2721,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/sansalvador.jpg"
+            "imatge": "/images/sansalvador.jpg",
+            "continente": "América",
+            "dificultad": 1
         },
         {
             "id": 110,
@@ -2528,7 +2746,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/sanjose.jpg"
+            "imatge": "/images/sanjose.jpg",
+            "continente": "América",
+            "dificultad": 1
         },
         {
             "id": 111,
@@ -2551,7 +2771,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/panama.jpg"
+            "imatge": "/images/panama.jpg",
+            "continente": "América",
+            "dificultad": 1
         },
         {
             "id": 112,
@@ -2574,7 +2796,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/santodomingo.jpg"
+            "imatge": "/images/santodomingo.jpg",
+            "continente": "América",
+            "dificultad": 1
         },
         {
             "id": 113,
@@ -2597,7 +2821,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/daca.jpg"
+            "imatge": "/images/daca.jpg",
+            "continente": "Asia",
+            "dificultad": 2
         },
         {
             "id": 114,
@@ -2620,7 +2846,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/vientian.jpg"
+            "imatge": "/images/vientian.jpg",
+            "continente": "Asia",
+            "dificultad": 2
         },
         {
             "id": 115,
@@ -2643,7 +2871,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/manila.jpg"
+            "imatge": "/images/manila.jpg",
+            "continente": "Asia",
+            "dificultad": 1
         },
         {
             "id": 116,
@@ -2666,7 +2896,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/naypyido.jpg"
+            "imatge": "/images/naypyido.jpg",
+            "continente": "Asia",
+            "dificultad": 2
         },
         {
             "id": 117,
@@ -2689,7 +2921,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/brunei.jpg"
+            "imatge": "/images/brunei.jpg",
+            "continente": "Asia",
+            "dificultad": 2
         },
         {
             "id": 118,
@@ -2712,7 +2946,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/katmandu.jpg"
+            "imatge": "/images/katmandu.jpg",
+            "continente": "Asia",
+            "dificultad": 2
         },
         {
             "id": 119,
@@ -2735,7 +2971,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/thimphu.jpg"
+            "imatge": "/images/thimphu.jpg",
+            "continente": "Asia",
+            "dificultad": 2
         },
         {
             "id": 120,
@@ -2758,7 +2996,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/edimburgo.jpg"
+            "imatge": "/images/edimburgo.jpg",
+            "continente": "Europa",
+            "dificultad": 1
         },
         {
             "id": 121,
@@ -2781,7 +3021,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/luxemburgo.jpg"
+            "imatge": "/images/luxemburgo.jpg",
+            "continente": "Europa",
+            "dificultad": 1
         },
         {
             "id": 122,
@@ -2804,7 +3046,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/cardiff.jpg"
+            "imatge": "/images/cardiff.jpg",
+            "continente": "Europa",
+            "dificultad": 1
         },
         {
             "id": 123,
@@ -2827,7 +3071,9 @@
                     "correcta": false
                 }
             ],
-            "imatge": "/images/belfast.jpg"
+            "imatge": "/images/belfast.jpg",
+            "continente": "Europa",
+            "dificultad": 1
         }
     ]
 }

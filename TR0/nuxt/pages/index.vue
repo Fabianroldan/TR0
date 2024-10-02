@@ -6,6 +6,8 @@
       <input v-model="nuevaPregunta.pregunta" placeholder="Pregunta" required />
       <input v-model="nuevaPregunta.opcions" placeholder="Opciones (separadas por comas)" required />
       <input v-model="nuevaPregunta.imatge" placeholder="Imagen URL" required />
+      <input v-model="nuevaPregunta.continente" placeholder="Continente" required />
+      <input type="number" v-model="nuevaPregunta.dificultad" placeholder="Dificultad (1-4)" min="1" max="4" required />
       <button type="submit">Agregar Pregunta</button>
     </form>
 
@@ -55,7 +57,6 @@ export default {
     },
     
     async addPregunta() {
-      // Transformar las opciones de texto a un array
       this.nuevaPregunta.opcions = this.nuevaPregunta.opcions.split(',').map(opcion => opcion.trim());
       
       const addedPregunta = await communicationManager.addPregunta(this.nuevaPregunta);
@@ -64,14 +65,18 @@ export default {
     },
 
     async editPregunta(pregunta) {
-      this.nuevaPregunta = { ...pregunta };  // Cargar la pregunta en el formulario
+      this.nuevaPregunta = { ...pregunta };
       this.editMode = true;
       this.preguntaId = pregunta.id;
     },
 
     async updatePregunta() {
-      // Aquí iría la lógica para actualizar
-      // similar a addPregunta, pero usando updatePregunta
+      this.nuevaPregunta.opcions = this.nuevaPregunta.opcions.split(',').map(opcion => opcion.trim());
+
+      const updatedPregunta = await communicationManager.updatePregunta(this.preguntaId, this.nuevaPregunta);
+      const index = this.preguntas.findIndex(p => p.id === this.preguntaId);
+      this.$set(this.preguntas, index, updatedPregunta);
+      this.resetForm();
     },
 
     async deletePregunta(id) {
@@ -89,5 +94,4 @@ export default {
 </script>
 
 <style scoped>
-/* Agrega tus estilos aquí */
 </style>
