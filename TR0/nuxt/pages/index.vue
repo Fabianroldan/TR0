@@ -180,8 +180,8 @@ ul {
 
 .pregunta-container {
   display: flex;
-  justify-content: center; /* Centrar el contenido */
-  align-items: center; /* Alinear verticalmente */
+  justify-content: center;
+  align-items: center;
   background-color: white;
   margin: 10px 0;
   padding: 15px;
@@ -191,14 +191,14 @@ ul {
 
 .pregunta {
   flex: 1;
-  margin-right: 20px; /* Espacio entre la pregunta y las respuestas */
-  text-align: center; /* Centrar el texto de la pregunta */
+  margin-right: 20px;
+  text-align: center;
 }
 
 .pregunta-imagen {
-  width: 750px; /* Ajusta el tamaño que desees */
-  height: 500px; /* Ajusta el tamaño que desees */
-  object-fit: cover; /* Mantiene la proporción de la imagen */
+  width: 750px;
+  height: 500px;
+  object-fit: cover;
   margin-top: 10px;
 }
 
@@ -217,13 +217,13 @@ ul {
 }
 
 .correct {
-  color: green; /* Color para la respuesta correcta */
+  color: green;
 }
 
 .pregunta-actions {
   margin-top: 10px;
   display: flex;
-  justify-content: center; /* Centrar los botones */
-  gap: 10px; /* Espacio entre botones */
+  justify-content: center;
+  gap: 10px;
 }
 </style>
