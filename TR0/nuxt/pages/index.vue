@@ -173,6 +173,7 @@ button {
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
+  margin-top: 1vh;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s, transform 0.2s;
@@ -197,6 +198,7 @@ ul {
   margin: 10px auto;
   padding: 15px;
   border-radius: 8px;
+  margin-bottom: 1vh;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   border: 1px solid black;
   width: 60%;
@@ -221,10 +223,10 @@ ul {
 .respuestas {
   flex: 2;
   display: flex;
-  margin-left: 1.5vh;
+  margin-left: 5vh;
   flex-direction: column;
   justify-content: center;
-  gap: 2vh;
+  gap: 3vh;
   height: 100%;
   margin-top: 6vh;
 }
