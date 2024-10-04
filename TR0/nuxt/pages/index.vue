@@ -210,6 +210,7 @@ button {
   font-size: 1rem;
   border: 1px solid black;
   transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 button:hover {
@@ -250,6 +251,9 @@ ul {
 .pregunta-imagen {
   width: 750px;
   height: 450px;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   object-fit: cover;
 }
 
@@ -276,6 +280,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   font-size: 1.2rem;
   font-weight: bold; 
 }
@@ -312,6 +317,7 @@ ul {
   background-color: red;
   color: white;
   border: 1px solid black;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .eliminar-button:hover {
