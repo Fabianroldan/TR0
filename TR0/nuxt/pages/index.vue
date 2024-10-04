@@ -2,31 +2,39 @@
   <div>
     <h1>Administración de preguntas</h1>
 
-    <form @submit.prevent="addPregunta">
-      <h1>Crear preguntas</h1>
+    <form ref="preguntaForm" @submit.prevent="editMode ? updatePregunta() : addPregunta()">
+      <h1>{{ editMode ? "Editar pregunta" : "Crear preguntas" }}</h1>
       <label for="pregunta">Pregunta:</label>
       <input id="pregunta" type="text" v-model="nuevaPregunta.pregunta" placeholder="Pregunta" required />
-      
-      <label for="opcions">Opciones (separadas por comas):</label>
-      <input id="opcions" type="text" v-model="nuevaPregunta.opcions" placeholder="Opciones (separadas por comas)" required />
-      
+
+      <div class="opciones-container">
+        <div v-for="(opcion, index) in nuevaPregunta.opcions" :key="index" class="opcion-item">
+          <label :for="'opcion' + (index + 1)">Opción {{ index + 1 }}:</label>
+          <input type="text" :id="'opcion' + (index + 1)" v-model="opcion.resposta" :placeholder="'Opción ' + (index + 1)" required />
+          <label>
+            <input type="checkbox" v-model="opcion.correcta" />
+            Correcta
+          </label>
+        </div>
+      </div>
+
       <label for="imatge">Imagen URL:</label>
       <input id="imatge" type="text" v-model="nuevaPregunta.imatge" placeholder="Imagen URL" required />
-      
+
       <label for="continente">Continente:</label>
       <input id="continente" type="text" v-model="nuevaPregunta.continente" placeholder="Continente" required />
-      
+
       <label for="dificultat">Dificultad (1-4):</label>
       <input id="dificultat" type="number" v-model="nuevaPregunta.dificultat" placeholder="Dificultad (1-4)" min="1" max="4" required />
-      
-      <button type="submit">Agregar Pregunta</button>
+
+      <button type="submit">{{ editMode ? "Actualizar Pregunta" : "Agregar Pregunta" }}</button>
     </form>
 
     <ul>
       <li v-for="(pregunta, index) in preguntas" :key="pregunta.id" class="pregunta-container">
         <div class="pregunta-content">
           <div class="pregunta-imagen-contenedor">
-            <h2>{{ index + 1 }}. {{ pregunta.pregunta }}</h2> <!-- Agregar el número aquí -->
+            <h2>{{ index + 1 }}. {{ pregunta.pregunta }}</h2>
             <img v-if="pregunta.imatge" :src="pregunta.imatge" alt="Imagen de la pregunta" class="pregunta-imagen" />
           </div>
           <div class="respuestas">
@@ -38,7 +46,7 @@
 
         <div class="pregunta-actions">
           <button @click="editPregunta(pregunta)">Editar</button>
-          <button @click="deletePregunta(pregunta.id)">Eliminar</button>
+          <button @click="deletePregunta(pregunta.id)" class="eliminar-button">Eliminar</button>
         </div>
       </li>
     </ul>
@@ -54,7 +62,12 @@ export default {
       preguntas: [],
       nuevaPregunta: {
         pregunta: '',
-        opcions: [],
+        opcions: [
+          { resposta: '', correcta: false },
+          { resposta: '', correcta: false },
+          { resposta: '', correcta: false },
+          { resposta: '', correcta: false }
+        ],
         imatge: '',
         continente: '',
         dificultad: null
@@ -74,8 +87,9 @@ export default {
     },
     
     async addPregunta() {
-      this.nuevaPregunta.opcions = this.nuevaPregunta.opcions.split(',').map(opcion => opcion.trim());
-      
+      const opciones = this.nuevaPregunta.opcions.filter(opcion => opcion.resposta.trim() !== '');
+      this.nuevaPregunta.opcions = opciones;
+
       const addedPregunta = await communicationManager.addPregunta(this.nuevaPregunta);
       this.preguntas.push(addedPregunta);
       this.resetForm();
@@ -85,10 +99,15 @@ export default {
       this.nuevaPregunta = { ...pregunta };
       this.editMode = true;
       this.preguntaId = pregunta.id;
+      
+      this.$nextTick(() => {
+        this.$refs.preguntaForm.scrollIntoView({ behavior: 'smooth' });
+      });
     },
-
+    
     async updatePregunta() {
-      this.nuevaPregunta.opcions = this.nuevaPregunta.opcions.split(',').map(opcion => opcion.trim());
+      const opciones = this.nuevaPregunta.opcions.filter(opcion => opcion.resposta.trim() !== '');
+      this.nuevaPregunta.opcions = opciones;
 
       const updatedPregunta = await communicationManager.updatePregunta(this.preguntaId, this.nuevaPregunta);
       const index = this.preguntas.findIndex(p => p.id === this.preguntaId);
@@ -102,7 +121,18 @@ export default {
     },
 
     resetForm() {
-      this.nuevaPregunta = { pregunta: '', opcions: [], imatge: '', continente: '', dificultad: null };
+      this.nuevaPregunta = { 
+        pregunta: '', 
+        opcions: [
+          { resposta: '', correcta: false },
+          { resposta: '', correcta: false },
+          { resposta: '', correcta: false },
+          { resposta: '', correcta: false }
+        ],
+        imatge: '', 
+        continente: '', 
+        dificultad: null 
+      };
       this.editMode = false;
       this.preguntaId = null;
     }
@@ -111,7 +141,6 @@ export default {
 </script>
 
 <style scoped>
-
 * {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
@@ -176,6 +205,7 @@ button {
   margin-top: 1vh;
   cursor: pointer;
   font-size: 1rem;
+  border: 1px solid black;
   transition: background-color 0.3s, transform 0.2s;
 }
 
@@ -257,5 +287,31 @@ ul {
   gap: 10px;
   margin-top: 10px;
   margin-right: 24vh;
+}
+
+.opciones-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1vh;
+  gap: 0.4vh;
+}
+
+.opcion-item {
+  flex: 1 1 calc(50% - 0.8vh);
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.eliminar-button {
+  background-color: red;
+  color: white;
+  border: 1px solid black;
+}
+
+.eliminar-button:hover {
+  background-color: darkred;
 }
 </style>

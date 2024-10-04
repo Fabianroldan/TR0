@@ -3074,31 +3074,6 @@
       "imatge": "/images/belfast.jpg",
       "continente": "Europa",
       "dificultad": 1
-    },
-    {
-      "id": 124,
-      "pregunta": "¿Cuál es la capital de Irlanda del Norte?",
-      "opcions": [
-        {
-          "resposta": "Belfast",
-          "correcta": true
-        },
-        {
-          "resposta": "Londonderry",
-          "correcta": false
-        },
-        {
-          "resposta": "Lisburn",
-          "correcta": false
-        },
-        {
-          "resposta": "Newry",
-          "correcta": false
-        }
-      ],
-      "imatge": "/images/belfast.jpg",
-      "continente": "Europa",
-      "dificultad": 1
     }
   ]
 }
