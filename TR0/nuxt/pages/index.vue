@@ -36,6 +36,9 @@
           <div class="pregunta-imagen-contenedor">
             <h2>{{ index + 1 }}. {{ pregunta.pregunta }}</h2>
             <img v-if="pregunta.imatge" :src="pregunta.imatge" alt="Imagen de la pregunta" class="pregunta-imagen" />
+            <p class="continente-dificultad">
+              Continente: {{ pregunta.continente }} | Dificultad: {{ pregunta.dificultat }}
+            </p>
           </div>
           <div class="respuestas">
             <div v-for="(opcion, index) in pregunta.opcions" :key="index" class="respuesta" :class="{ correct: opcion.correcta }">
@@ -202,7 +205,7 @@ button {
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
-  margin-top: 1vh;
+  margin-top: 0.5vh;
   cursor: pointer;
   font-size: 1rem;
   border: 1px solid black;
@@ -258,7 +261,7 @@ ul {
   justify-content: center;
   gap: 3vh;
   height: 100%;
-  margin-top: 6vh;
+  margin-top: 3,5vh;
 }
 
 .respuesta {
@@ -313,5 +316,9 @@ ul {
 
 .eliminar-button:hover {
   background-color: darkred;
+}
+
+.continente-dificultad {
+  text-align: center;
 }
 </style>
