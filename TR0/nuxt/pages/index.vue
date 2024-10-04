@@ -1,38 +1,41 @@
 <template>
   <div>
     <h1>Administración de preguntas</h1>
-    
+
     <form @submit.prevent="addPregunta">
       <h1>Crear preguntas</h1>
-      <label for="pregunta">Pregunta</label>
+      <label for="pregunta">Pregunta:</label>
       <input id="pregunta" type="text" v-model="nuevaPregunta.pregunta" placeholder="Pregunta" required />
       
-      <label for="opcions">Opciones (separadas por comas)</label>
+      <label for="opcions">Opciones (separadas por comas):</label>
       <input id="opcions" type="text" v-model="nuevaPregunta.opcions" placeholder="Opciones (separadas por comas)" required />
       
-      <label for="imatge">Imagen URL</label>
+      <label for="imatge">Imagen URL:</label>
       <input id="imatge" type="text" v-model="nuevaPregunta.imatge" placeholder="Imagen URL" required />
       
-      <label for="continente">Continente</label>
+      <label for="continente">Continente:</label>
       <input id="continente" type="text" v-model="nuevaPregunta.continente" placeholder="Continente" required />
       
-      <label for="dificultat">Dificultad (1-4)</label>
+      <label for="dificultat">Dificultad (1-4):</label>
       <input id="dificultat" type="number" v-model="nuevaPregunta.dificultat" placeholder="Dificultad (1-4)" min="1" max="4" required />
       
       <button type="submit">Agregar Pregunta</button>
     </form>
 
     <ul>
-      <li v-for="pregunta in preguntas" :key="pregunta.id" class="pregunta-container">
-        <div class="pregunta">
-          <h2>{{ pregunta.pregunta }}</h2>
-          <img v-if="pregunta.imatge" :src="pregunta.imatge" alt="Imagen de la pregunta" class="pregunta-imagen" />
-        </div>
-        <div class="respuestas">
-          <div v-for="(opcion, index) in pregunta.opcions" :key="index" class="respuesta" :class="{ correct: opcion.correcta }">
-            {{ opcion.resposta }} 
+      <li v-for="(pregunta, index) in preguntas" :key="pregunta.id" class="pregunta-container">
+        <div class="pregunta-content">
+          <div class="pregunta-imagen-contenedor">
+            <h2>{{ index + 1 }}. {{ pregunta.pregunta }}</h2> <!-- Agregar el número aquí -->
+            <img v-if="pregunta.imatge" :src="pregunta.imatge" alt="Imagen de la pregunta" class="pregunta-imagen" />
+          </div>
+          <div class="respuestas">
+            <div v-for="(opcion, index) in pregunta.opcions" :key="index" class="respuesta" :class="{ correct: opcion.correcta }">
+              {{ opcion.resposta }} 
+            </div>
           </div>
         </div>
+
         <div class="pregunta-actions">
           <button @click="editPregunta(pregunta)">Editar</button>
           <button @click="deletePregunta(pregunta.id)">Eliminar</button>
@@ -108,9 +111,15 @@ export default {
 </script>
 
 <style scoped>
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
   background-color: #e9ecef;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 20px;
 }
@@ -136,6 +145,7 @@ label {
   margin-bottom: 5px;
   font-weight: bold;
   color: #333;
+  font-size: 1rem;
 }
 
 input[type="text"],
@@ -145,7 +155,7 @@ input[type="number"] {
   margin: 10px 0;
   border: 1px solid black;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: #f2f2f2;
   transition: border-color 0.3s;
   box-sizing: border-box;
@@ -164,7 +174,7 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   transition: background-color 0.3s, transform 0.2s;
 }
 
@@ -180,50 +190,70 @@ ul {
 
 .pregunta-container {
   display: flex;
+  flex-direction: column;
+  background-color: white;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  margin: 10px 0;
+  margin: 10px auto;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+  width: 60%;
 }
 
-.pregunta {
+.pregunta-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pregunta-imagen-contenedor {
   flex: 1;
-  margin-right: 20px;
-  text-align: center;
 }
 
 .pregunta-imagen {
   width: 750px;
-  height: 500px;
+  height: 450px;
   object-fit: cover;
-  margin-top: 10px;
 }
 
 .respuestas {
+  flex: 2;
   display: flex;
+  margin-left: 1.5vh;
   flex-direction: column;
+  justify-content: center;
+  gap: 2vh;
+  height: 100%;
+  margin-top: 6vh;
 }
 
 .respuesta {
+  width: 200px;
+  height: 6vh;
   border: 1px solid black;
   padding: 10px;
-  margin: 5px 0;
   border-radius: 4px;
   text-align: center;
-  color: red;
+  background-color: red;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold; 
 }
 
 .correct {
-  color: green;
+  background-color: #28a745;
 }
 
 .pregunta-actions {
-  margin-top: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px;
+  margin-top: 10px;
+  margin-right: 24vh;
 }
 </style>
