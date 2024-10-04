@@ -168,7 +168,7 @@ form {
   padding: 20px;
   border: 1.5px solid black;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
 }
 
@@ -233,7 +233,7 @@ ul {
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 1vh;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   border: 1px solid black;
   width: 60%;
 }
