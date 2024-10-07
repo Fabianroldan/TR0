@@ -30,11 +30,34 @@
       <button type="submit">{{ editMode ? "Actualizar Pregunta" : "Agregar Pregunta" }}</button>
     </form>
 
+    <div class="filtros-container">
+      <div class="filtros">
+        <label for="filtro-continente">Filtrar por continente:</label>
+        <select id="filtro-continente" v-model="filtroContinente" @change="aplicarFiltros">
+          <option value="">Todos</option>
+          <option value="Asia">Asia</option>
+          <option value="Europa">Europa</option>
+          <option value="África">África</option>
+          <option value="América">América</option>
+          <option value="Oceanía">Oceanía</option>
+        </select>
+
+        <label for="filtro-dificultad">Filtrar por dificultad:</label>
+        <select id="filtro-dificultad" v-model="filtroDificultad" @change="aplicarFiltros">
+          <option value="">Todos</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+    </div>
+
     <ul>
-      <li v-for="(pregunta, index) in preguntas" :key="pregunta.id" class="pregunta-container">
+      <li v-for="pregunta in preguntasFiltradas" :key="pregunta.id" class="pregunta-container">
         <div class="pregunta-content">
           <div class="pregunta-imagen-contenedor">
-            <h2>{{ index + 1 }}. {{ pregunta.pregunta }}</h2>
+            <h2>{{ pregunta.id }} - {{ pregunta.pregunta }}</h2>
             <img v-if="pregunta.imatge" :src="pregunta.imatge" alt="Imagen de la pregunta" class="pregunta-imagen" />
             <p class="continente-dificultad">
               Continente: {{ pregunta.continente }} | Dificultad: {{ pregunta.dificultat }}
@@ -77,9 +100,21 @@ export default {
       },
       editMode: false,
       preguntaId: null,
+      filtroContinente: '',
+      filtroDificultad: '',
     };
   },
   
+  computed: {
+    preguntasFiltradas() {
+      return this.preguntas.filter(pregunta => {
+        const coincideContinente = this.filtroContinente ? pregunta.continente === this.filtroContinente : true;
+        const coincideDificultad = this.filtroDificultad ? pregunta.dificultat == this.filtroDificultad : true;
+        return coincideContinente && coincideDificultad;
+      });
+    }
+  },
+
   async mounted() {
     await this.fetchPreguntas();
   },
@@ -89,6 +124,10 @@ export default {
       this.preguntas = await communicationManager.getPreguntas();
     },
     
+    aplicarFiltros() {
+      this.preguntasFiltradas;
+    },
+
     async addPregunta() {
       const opciones = this.nuevaPregunta.opcions.filter(opcion => opcion.resposta.trim() !== '');
       this.nuevaPregunta.opcions = opciones;
@@ -326,5 +365,45 @@ ul {
 
 .continente-dificultad {
   text-align: center;
+}
+
+.filtros-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.filtros {
+  background-color: white;
+  padding: 15px;
+  border: 1.5px solid black;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+}
+
+.filtros label {
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.filtros select {
+  width: 150px;
+  padding: 10px;
+  margin: 10px 5px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #f2f2f2;
+  transition: border-color 0.3s;
+}
+
+.filtros select:focus {
+  border-color: black;
+  outline: none;
 }
 </style>

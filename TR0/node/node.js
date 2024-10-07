@@ -71,6 +71,28 @@ app.delete('/preguntas/:id', (req, res) => {
     res.status(200).json({ mensaje: 'Pregunta eliminada correctamente' });
 });
 
+app.get('/preguntas/continente/:continente', (req, res) => {
+    const { continente } = req.params;
+    const preguntasFiltradas = preguntas.filter(p => p.continente.toLowerCase() === continente.toLowerCase());
+
+    if (preguntasFiltradas.length === 0) {
+        return res.status(404).json({ mensaje: 'No se encontraron preguntas para el continente especificado' });
+    }
+
+    res.json(preguntasFiltradas);
+});
+
+app.get('/preguntas/dificultad/:dificultad', (req, res) => {
+    const { dificultad } = req.params;
+    const preguntasFiltradas = preguntas.filter(p => p.dificultat == dificultad);
+
+    if (preguntasFiltradas.length === 0) {
+        return res.status(404).json({ mensaje: 'No se encontraron preguntas para la dificultad especificada' });
+    }
+
+    res.json(preguntasFiltradas);
+});
+
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}/preguntas`);
 });
