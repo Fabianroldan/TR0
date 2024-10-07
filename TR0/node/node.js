@@ -17,7 +17,7 @@ const cargarPreguntas = () => {
 };
 
 const guardarPreguntas = () => {
-    fs.writeFileSync(path.join(__dirname, 'preguntas.json'), JSON.stringify({ preguntes: preguntas }, null, 2));
+    fs.writeFileSync(path.join(__dirname, '../preguntes.json'), JSON.stringify({ preguntes: preguntas }, null, 2));
 };
 
 cargarPreguntas();
