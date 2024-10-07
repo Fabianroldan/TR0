@@ -173,7 +173,7 @@
       ],
       "imatge": "/images/ottawa.jpg",
       "continente": "América del Norte",
-      "dificultat": "1"
+      "dificultat": 2
     },
     {
       "id": 8,
@@ -198,7 +198,7 @@
       ],
       "imatge": "/images/canberra.jpg",
       "continente": "Oceanía",
-      "dificultat": "1"
+      "dificultat": 2
     },
     {
       "id": 9,
@@ -223,7 +223,7 @@
       ],
       "imatge": "/images/brasilia.jpg",
       "continente": "América del Sur",
-      "dificultat": "1"
+      "dificultat": 2
     },
     {
       "id": 10,
@@ -248,7 +248,7 @@
       ],
       "imatge": "/images/buenos_aires.jpg",
       "continente": "América del Sur",
-      "dificultat": "1"
+      "dificultat": 2
     },
     {
       "id": 11,
@@ -273,7 +273,7 @@
       ],
       "imatge": "/images/santiago.jpg",
       "continente": "América del Sur",
-      "dificultat": "1"
+      "dificultat": 2
     },
     {
       "id": 12,
@@ -3074,6 +3074,31 @@
       "imatge": "/images/belfast.jpg",
       "continente": "Europa",
       "dificultat": 1
+    },
+    {
+      "id": 124,
+      "pregunta": "¿Cuál es la capital de Irlanda del Norte?",
+      "opcions": [
+        {
+          "resposta": "Belfast",
+          "correcta": true
+        },
+        {
+          "resposta": "Londonderry",
+          "correcta": false
+        },
+        {
+          "resposta": "Lisburn",
+          "correcta": false
+        },
+        {
+          "resposta": "Newry",
+          "correcta": false
+        }
+      ],
+      "imatge": "/images/belfast.jpg",
+      "continente": "Europa",
+      "dificultad": 1
     }
   ]
 }

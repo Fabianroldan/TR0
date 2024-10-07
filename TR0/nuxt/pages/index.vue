@@ -383,7 +383,19 @@ ul {
   justify-content: space-around;
   align-items: center;
   width: 60%;
+  position: relative;
 }
+
+.filtros::after {
+  content: '';
+  width: 2px;
+  height: 50px;
+  background-color: black;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 
 .filtros label {
   font-weight: bold;
