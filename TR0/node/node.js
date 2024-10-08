@@ -14,24 +14,30 @@ let preguntas = [];
 const cargarPreguntas = () => {
     const data = fs.readFileSync(path.join(__dirname, '../preguntes.json'));
     preguntas = JSON.parse(data).preguntes;
-    contarPreguntasPorDificultad();
 };
 
 const guardarPreguntas = () => {
     fs.writeFileSync(path.join(__dirname, '../preguntes.json'), JSON.stringify({ preguntes: preguntas }, null, 2));
 };
 
-const contarPreguntasPorDificultad = () => {
-    const recuento = preguntas.reduce((acc, pregunta) => {
-        const dificultad = pregunta.dificultat;
-        acc[dificultad] = (acc[dificultad] || 0) + 1;
-        return acc;
-    }, {});
+const generarPreguntasAleatorias = (cantidad = 10) => {
+    const dificultadAleatoria = Math.floor(Math.random() * 4) + 1;
+    const preguntasFiltradas = preguntas.filter(p => p.dificultat === dificultadAleatoria);
+    const preguntasAleatorias = [];
 
-    console.log('Recuento de preguntas por dificultad:', recuento);
+    while (preguntasAleatorias.length < cantidad && preguntasFiltradas.length > 0) {
+        const randomIndex = Math.floor(Math.random() * preguntasFiltradas.length);
+        preguntasAleatorias.push(preguntasFiltradas[randomIndex]);
+        preguntasFiltradas.splice(randomIndex, 1);
+    }
+
+    return { dificultad: dificultadAleatoria, preguntas: preguntasAleatorias };
 };
 
 cargarPreguntas();
+
+const { dificultad, preguntas: preguntasAleatorias } = generarPreguntasAleatorias(10);
+console.log(`Preguntas Aleatorias de Dificultad ${dificultad}:`, JSON.stringify(preguntasAleatorias, null, 2));
 
 app.get('/preguntas', (req, res) => {
     res.json(preguntas);
@@ -52,7 +58,6 @@ app.post('/preguntas', (req, res) => {
     const nuevaPregunta = { id: preguntas.length + 1, ...req.body };
     preguntas.push(nuevaPregunta);
     guardarPreguntas();
-    contarPreguntasPorDificultad();
     res.status(201).json(nuevaPregunta);
 });
 
@@ -66,7 +71,6 @@ app.put('/preguntas/:id', (req, res) => {
 
     preguntas[preguntaIndex] = { ...preguntas[preguntaIndex], ...req.body };
     guardarPreguntas();
-    contarPreguntasPorDificultad();
     res.json(preguntas[preguntaIndex]);
 });
 
@@ -80,7 +84,6 @@ app.delete('/preguntas/:id', (req, res) => {
 
     preguntas.splice(preguntaIndex, 1);
     guardarPreguntas();
-    contarPreguntasPorDificultad();
     res.status(200).json({ mensaje: 'Pregunta eliminada correctamente' });
 });
 
