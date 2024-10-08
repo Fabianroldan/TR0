@@ -12,7 +12,11 @@
           <label :for="'opcion' + (index + 1)">Opción {{ index + 1 }}:</label>
           <input type="text" :id="'opcion' + (index + 1)" v-model="opcion.resposta" :placeholder="'Opción ' + (index + 1)" required />
           <label>
-            <input type="checkbox" v-model="opcion.correcta" />
+            <input
+              type="checkbox"
+              v-model="opcion.correcta"
+              @change="marcarComoCorrecta(index)"
+            />
             Correcta
           </label>
         </div>
@@ -126,6 +130,19 @@ export default {
     
     aplicarFiltros() {
       this.preguntasFiltradas;
+    },
+
+    marcarComoCorrecta(index) {
+      this.nuevaPregunta.opcions.forEach((opcion, i) => {
+        if (i !== index) {
+          opcion.correcta = false;
+        }
+      });
+
+      const algunaCorrecta = this.nuevaPregunta.opcions.some(opcion => opcion.correcta);
+      if (!algunaCorrecta) {
+        this.nuevaPregunta.opcions[0].correcta = true;
+      }
     },
 
     async addPregunta() {
