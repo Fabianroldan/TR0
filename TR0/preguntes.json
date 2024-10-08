@@ -273,7 +273,7 @@
       ],
       "imatge": "/images/santiago.jpg",
       "continente": "América",
-      "dificultat": "1"
+      "dificultat": "2"
     },
     {
       "id": 12,
@@ -398,7 +398,7 @@
       ],
       "imatge": "/images/asuncion.jpg",
       "continente": "América",
-      "dificultat": 2
+      "dificultat": "3"
     },
     {
       "id": 17,
@@ -423,7 +423,7 @@
       ],
       "imatge": "/images/la_paz.jpg",
       "continente": "América",
-      "dificultat": 2
+      "dificultat": "3"
     },
     {
       "id": 18,
@@ -773,7 +773,7 @@
       ],
       "imatge": "/images/praga.jpg",
       "continente": "Europa",
-      "dificultat": 2
+      "dificultat": "1"
     },
     {
       "id": 32,
@@ -848,7 +848,7 @@
       ],
       "imatge": "/images/liubliana.jpg",
       "continente": "Europa",
-      "dificultat": 2
+      "dificultat": "3"
     },
     {
       "id": 35,
@@ -898,7 +898,7 @@
       ],
       "imatge": "/images/sofia.jpg",
       "continente": "Europa",
-      "dificultat": 2
+      "dificultat": "3"
     },
     {
       "id": 37,
@@ -973,7 +973,7 @@
       ],
       "imatge": "/images/skopie.jpg",
       "continente": "Europa",
-      "dificultat": 2
+      "dificultat": "3"
     },
     {
       "id": 40,
@@ -1023,7 +1023,7 @@
       ],
       "imatge": "/images/podgorica.jpg",
       "continente": "Europa",
-      "dificultat": 2
+      "dificultat": "3"
     },
     {
       "id": 42,
@@ -1098,7 +1098,7 @@
       ],
       "imatge": "/images/minsk.jpg",
       "continente": "Europa",
-      "dificultat": 2
+      "dificultat": "3"
     },
     {
       "id": 45,
@@ -1123,7 +1123,7 @@
       ],
       "imatge": "/images/riga.jpg",
       "continente": "Europa",
-      "dificultat": 2
+      "dificultat": "3"
     },
     {
       "id": 46,
@@ -1148,7 +1148,7 @@
       ],
       "imatge": "/images/vilna.jpg",
       "continente": "Europa",
-      "dificultat": 2
+      "dificultat": "3"
     },
     {
       "id": 47,
@@ -1173,7 +1173,7 @@
       ],
       "imatge": "/images/tallin.jpg",
       "continente": "Europa",
-      "dificultat": 2
+      "dificultat": "3"
     },
     {
       "id": 48,
@@ -1698,7 +1698,7 @@
       ],
       "imatge": "/images/mascate.jpg",
       "continente": "Asia",
-      "dificultat": 3
+      "dificultat": "4"
     },
     {
       "id": 69,
@@ -2148,7 +2148,7 @@
       ],
       "imatge": "/images/ulan_bator.jpg",
       "continente": "Asia",
-      "dificultat": 3
+      "dificultat": "4"
     },
     {
       "id": 87,
@@ -2448,7 +2448,7 @@
       ],
       "imatge": "/images/dakar.jpg",
       "continente": "África",
-      "dificultat": 3
+      "dificultat": "4"
     },
     {
       "id": 99,
@@ -2498,7 +2498,7 @@
       ],
       "imatge": "/images/yamusukro.jpg",
       "continente": "África",
-      "dificultat": 3
+      "dificultat": "4"
     },
     {
       "id": 101,
@@ -2598,7 +2598,7 @@
       ],
       "imatge": "/images/abuja.jpg",
       "continente": "África",
-      "dificultat": 3
+      "dificultat": "4"
     },
     {
       "id": 105,
@@ -2698,7 +2698,7 @@
       ],
       "imatge": "/images/tegucigalpa.jpg",
       "continente": "América",
-      "dificultat": 3
+      "dificultat": "4"
     },
     {
       "id": 109,
@@ -2823,7 +2823,7 @@
       ],
       "imatge": "/images/daca.jpg",
       "continente": "Asia",
-      "dificultat": 3
+      "dificultat": "4"
     },
     {
       "id": 114,
@@ -2873,7 +2873,7 @@
       ],
       "imatge": "/images/manila.jpg",
       "continente": "Asia",
-      "dificultat": 2
+      "dificultat": "3"
     },
     {
       "id": 116,
@@ -2998,7 +2998,7 @@
       ],
       "imatge": "/images/edimburgo.jpg",
       "continente": "Europa",
-      "dificultat": 1
+      "dificultat": "2"
     },
     {
       "id": 121,
@@ -3074,6 +3074,31 @@
       "imatge": "/images/belfast.jpg",
       "continente": "Europa",
       "dificultat": 2
+    },
+    {
+      "id": 124,
+      "pregunta": "¿Cuál es la capital de Tayikistán?",
+      "opcions": [
+        {
+          "resposta": "Dusambé",
+          "correcta": true
+        },
+        {
+          "resposta": "Jumgal",
+          "correcta": false
+        },
+        {
+          "resposta": "Khorugh",
+          "correcta": false
+        },
+        {
+          "resposta": "Panjakent",
+          "correcta": false
+        }
+      ],
+      "imatge": "/images/dushanbe.jpg",
+      "continente": "Asia",
+      "dificultat": 4
     }
   ]
 }

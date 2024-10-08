@@ -14,10 +14,21 @@ let preguntas = [];
 const cargarPreguntas = () => {
     const data = fs.readFileSync(path.join(__dirname, '../preguntes.json'));
     preguntas = JSON.parse(data).preguntes;
+    contarPreguntasPorDificultad();
 };
 
 const guardarPreguntas = () => {
     fs.writeFileSync(path.join(__dirname, '../preguntes.json'), JSON.stringify({ preguntes: preguntas }, null, 2));
+};
+
+const contarPreguntasPorDificultad = () => {
+    const recuento = preguntas.reduce((acc, pregunta) => {
+        const dificultad = pregunta.dificultat;
+        acc[dificultad] = (acc[dificultad] || 0) + 1;
+        return acc;
+    }, {});
+
+    console.log('Recuento de preguntas por dificultad:', recuento);
 };
 
 cargarPreguntas();
@@ -37,11 +48,11 @@ app.get('/preguntas/:id', (req, res) => {
     res.json(pregunta);
 });
 
-
 app.post('/preguntas', (req, res) => {
     const nuevaPregunta = { id: preguntas.length + 1, ...req.body };
     preguntas.push(nuevaPregunta);
     guardarPreguntas();
+    contarPreguntasPorDificultad();
     res.status(201).json(nuevaPregunta);
 });
 
@@ -55,6 +66,7 @@ app.put('/preguntas/:id', (req, res) => {
 
     preguntas[preguntaIndex] = { ...preguntas[preguntaIndex], ...req.body };
     guardarPreguntas();
+    contarPreguntasPorDificultad();
     res.json(preguntas[preguntaIndex]);
 });
 
@@ -68,6 +80,7 @@ app.delete('/preguntas/:id', (req, res) => {
 
     preguntas.splice(preguntaIndex, 1);
     guardarPreguntas();
+    contarPreguntasPorDificultad();
     res.status(200).json({ mensaje: 'Pregunta eliminada correctamente' });
 });
 
