@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
+const multer = require('multer'); // Importar multer
 
 const app = express();
 const PORT = 5000;
@@ -9,6 +10,21 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 
+// Middleware para servir archivos estáticos desde la carpeta 'images'
+app.use('/images', express.static(path.join(__dirname, 'images')));
+
+// Configuración de multer para guardar imágenes en la carpeta 'images'
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'images'); // Carpeta donde se guardan las imágenes
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.originalname); // Guarda la imagen con su nombre original
+    }
+});
+const upload = multer({ storage });
+
+// Inicializar el arreglo de preguntas
 let preguntas = [];
 
 // Cargar preguntas desde el archivo JSON
@@ -42,7 +58,7 @@ const generarPreguntasAleatorias = (cantidad = 10, dificultad) => {
 // Cargar las preguntas al iniciar el servidor
 cargarPreguntas();
 
-// Endpoint para obtener preguntas aleatorias, filtrando por dificultad si se proporciona
+// Endpoint para obtener preguntas aleatorias
 app.get('/preguntas', (req, res) => {
     const { dificultad } = req.query; // Obtenemos la dificultad de los parámetros de consulta
     const preguntasAleatorias = generarPreguntasAleatorias(10, dificultad); // Generamos preguntas con dificultad
@@ -63,17 +79,12 @@ app.get('/preguntas/:id', (req, res) => {
     res.json(pregunta);
 });
 
-// Endpoint para obtener preguntas aleatorias según dificultad (opcional)
-app.get('/preguntas/dificultad/:dificultad/aleatorias', (req, res) => {
-    const { dificultad } = req.params;
-    const preguntasFiltradas = preguntas.filter(p => p.dificultat == dificultad);
-    
-    if (preguntasFiltradas.length === 0) {
-        return res.status(404).json({ mensaje: 'No se encontraron preguntas para la dificultad especificada' });
+// Endpoint para subir imágenes
+app.post('/upload', upload.single('imagen'), (req, res) => {
+    if (!req.file) {
+        return res.status(400).json({ mensaje: 'No se ha subido ninguna imagen' });
     }
-
-    const preguntasAleatorias = generarPreguntasAleatorias(10, dificultad);
-    res.json(preguntasAleatorias);
+    res.status(201).json({ mensaje: 'Imagen subida correctamente', file: req.file });
 });
 
 // Endpoint para agregar una nueva pregunta
@@ -138,5 +149,5 @@ app.get('/preguntas/dificultad/:dificultad', (req, res) => {
 
 // Iniciar el servidor
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://192.168.56.1:5000/preguntas`);
+    console.log(`Servidor corriendo en http://localhost:${PORT}/preguntas`);
 });
