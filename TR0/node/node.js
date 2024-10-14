@@ -42,23 +42,7 @@ const generarPreguntasAleatorias = (cantidad = 10, dificultad) => {
 
     while (preguntasAleatorias.length < cantidad && preguntasFiltradas.length > 0) {
         const randomIndex = Math.floor(Math.random() * preguntasFiltradas.length);
-        const pregunta = preguntasFiltradas[randomIndex];
-
-        const respuestasDesordenadas = [...pregunta.respuestas];
-        const respuestaCorrecta = pregunta.respuestaCorrecta;
-
-        respuestasDesordenadas.splice(respuestasDesordenadas.indexOf(respuestaCorrecta), 1);
-        respuestasDesordenadas.push(respuestaCorrecta);
-
-        const respuestasAleatorias = respuestasDesordenadas.sort(() => Math.random() - 0.5);
-
-        console.log(`Pregunta: ${pregunta.pregunta}, Respuestas desordenadas: ${JSON.stringify(respuestasAleatorias)}`);
-
-        preguntasAleatorias.push({
-            ...pregunta,
-            respuestas: respuestasAleatorias
-        });
-
+        preguntasAleatorias.push(preguntasFiltradas[randomIndex]);
         preguntasFiltradas.splice(randomIndex, 1);
     }
 
@@ -153,6 +137,5 @@ app.get('/preguntas/dificultad/:dificultad', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}/preguntas`);
-    // console.log(`Servidor corriendo en http://tr0.a21fabrolfer.inspedralbes.cat`);
+    console.log(`Server running on port ${PORT}`);
 });
