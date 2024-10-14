@@ -1,35 +1,69 @@
-export default {
-    async getPreguntas() {
-        const response = await fetch('http://localhost:5000/preguntas');
-        return response.json();
-    },
-    
-    async addPregunta(pregunta) {
-        const response = await fetch('http://localhost:5000/preguntas', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(pregunta)
-        });
-        return response.json();
-    },
+const API_URL = 'http://localhost:5000';
 
-    async updatePregunta(id, pregunta) {
-        const response = await fetch(`http://localhost:5000/preguntas/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(pregunta)
-        });
-        return response.json();
-    },
-
-    async deletePregunta(id) {
-        const response = await fetch(`http://localhost:5000/preguntas/${id}`, {
-            method: 'DELETE'
-        });
-        return response.json();
+const communicationManager = {
+  async getPreguntas() {
+    try {
+      const response = await fetch(`${API_URL}/preguntas/all`);
+      if (!response.ok) {
+        throw new Error('Error al obtener las preguntas');
+      }
+      return await response.json();
+    } catch (error) {
+      console.error('Error al obtener las preguntas:', error);
+      return [];
     }
-}
+  },
+
+  async addPregunta(pregunta) {
+    try {
+      const response = await fetch(`${API_URL}/preguntas`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(pregunta),
+      });
+      if (!response.ok) {
+        throw new Error('Error al agregar la pregunta');
+      }
+      return await response.json();
+    } catch (error) {
+      console.error('Error al agregar la pregunta:', error);
+      return null;
+    }
+  },
+
+  async updatePregunta(id, pregunta) {
+    try {
+      const response = await fetch(`${API_URL}/preguntas/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(pregunta),
+      });
+      if (!response.ok) {
+        throw new Error('Error al actualizar la pregunta');
+      }
+      return await response.json();
+    } catch (error) {
+      console.error('Error al actualizar la pregunta:', error);
+      return null;
+    }
+  },
+
+  async deletePregunta(id) {
+    try {
+      const response = await fetch(`${API_URL}/preguntas/${id}`, {
+        method: 'DELETE',
+      });
+      if (!response.ok) {
+        throw new Error('Error al eliminar la pregunta');
+      }
+    } catch (error) {
+      console.error('Error al eliminar la pregunta:', error);
+    }
+  },
+};
+
+export default communicationManager;
