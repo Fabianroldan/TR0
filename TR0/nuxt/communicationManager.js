@@ -1,4 +1,5 @@
 const API_URL = 'http://localhost:5000';
+// const API_PROD = 'http://tr0.a21fabrolfer.inspedralbes.cat';
 
 const communicationManager = {
   async getPreguntas() {

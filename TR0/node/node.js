@@ -154,4 +154,5 @@ app.get('/preguntas/dificultad/:dificultad', (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}/preguntas`);
+    // console.log(`Servidor corriendo en http://tr0.a21fabrolfer.inspedralbes.cat`);
 });
