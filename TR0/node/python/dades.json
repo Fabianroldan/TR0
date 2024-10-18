@@ -1,0 +1,64 @@
+{
+    "dadesPerPregunta": [
+        {
+            "id": 1,
+            "pregunta": "¿Cuál es la capital de Francia?",
+            "correctes": 3,
+            "intents": 10
+        },
+        {
+            "id": 2,
+            "pregunta": "¿Qué es el ADN?",
+            "correctes": 5,
+            "intents": 10
+        },
+        {
+            "id": 3,
+            "pregunta": "¿Quién escribió 'Cien años de soledad'?",
+            "correctes": 8,
+            "intents": 10
+        },
+        {
+            "id": 4,
+            "pregunta": "¿Cuál es el océano más grande?",
+            "correctes": 4,
+            "intents": 10
+        },
+        {
+            "id": 5,
+            "pregunta": "¿Qué es la fotosíntesis?",
+            "correctes": 7,
+            "intents": 10
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Cuál es el país más poblado del mundo?",
+            "correctes": 6,
+            "intents": 10
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Qué es un agujero negro?",
+            "correctes": 9,
+            "intents": 10
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Quién pintó la Mona Lisa?",
+            "correctes": 2,
+            "intents": 10
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Qué es la teoría de la relatividad?",
+            "correctes": 5,
+            "intents": 10
+        },
+        {
+            "id": 10,
+            "pregunta": "¿Qué es la evolución?",
+            "correctes": 1,
+            "intents": 10
+        }
+    ]
+}

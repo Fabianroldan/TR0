@@ -1,41 +1,63 @@
+// Importar dependencias necesarias
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const multer = require('multer');
+const { exec } = require('child_process'); // Para ejecutar el script de Python
 
+// Configuración de la aplicación Express
 const app = express();
 const PORT = 5000;
 
+// Middleware para habilitar CORS y permitir el uso de JSON
 app.use(cors());
 app.use(express.json());
 
+// Configuración para servir archivos estáticos desde la carpeta "images"
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
+// Configuración de Multer para subir archivos y guardarlos en la carpeta "images"
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'images');
+        cb(null, 'images'); // Guardar las imágenes en la carpeta "images"
     },
     filename: (req, file, cb) => {
-        cb(null, file.originalname);
+        cb(null, file.originalname); // Guardar con el nombre original del archivo
     }
 });
 const upload = multer({ storage });
 
+// Variable para almacenar las preguntas cargadas desde el archivo JSON
 let preguntas = [];
 
-const cargarPreguntas = () => {
-    const data = fs.readFileSync(path.join(__dirname, '../preguntes.json'));
-    preguntas = JSON.parse(data).preguntes;
+// Variable para almacenar las estadísticas
+let estadisticas = {
+    dadesPerPregunta: []
 };
 
-const guardarPreguntas = () => {
-    fs.writeFileSync(path.join(__dirname, '../preguntes.json'), JSON.stringify({ preguntes: preguntas }, null, 2));
+// Función para cargar preguntas y estadísticas desde archivos JSON
+const cargarDatos = () => {
+    // Cargar preguntas
+    const preguntasData = fs.readFileSync(path.join(__dirname, '../preguntes.json'));
+    preguntas = JSON.parse(preguntasData).preguntes;
+
+    // Cargar estadísticas
+    if (fs.existsSync(path.join(__dirname, '../estadisticas.json'))) {
+        const estadisticasData = fs.readFileSync(path.join(__dirname, '../estadisticas.json'));
+        estadisticas = JSON.parse(estadisticasData);
+    }
 };
 
+// Función para guardar estadísticas en el archivo JSON
+const guardarEstadisticas = () => {
+    fs.writeFileSync(path.join(__dirname, '../estadisticas.json'), JSON.stringify(estadisticas, null, 2));
+};
+
+// Función para generar preguntas aleatorias según la dificultad y la cantidad especificada
 const generarPreguntasAleatorias = (cantidad = 10, dificultad) => {
     const preguntasFiltradas = dificultad 
-        ? preguntas.filter(p => p.dificultat == dificultad) 
+        ? preguntas.filter(p => p.dificultat === dificultad) 
         : preguntas;
 
     const preguntasAleatorias = [];
@@ -49,8 +71,10 @@ const generarPreguntasAleatorias = (cantidad = 10, dificultad) => {
     return preguntasAleatorias;
 };
 
-cargarPreguntas();
+// Cargar las preguntas y estadísticas al iniciar el servidor
+cargarDatos();
 
+// Rutas para gestionar las preguntas
 app.get('/preguntas', (req, res) => {
     const { dificultad } = req.query;
     const preguntasAleatorias = generarPreguntasAleatorias(10, dificultad);
@@ -59,83 +83,72 @@ app.get('/preguntas', (req, res) => {
     res.json(preguntasAleatorias);
 });
 
-app.get('/preguntas/all', (req, res) => {
-    res.json(preguntas);
-});
+// Endpoint para registrar respuestas
+app.post('/respuestas', (req, res) => {
+    const { id, correcta } = req.body;
 
-app.get('/preguntas/:id', (req, res) => {
-    const { id } = req.params;
-    const pregunta = preguntas.find(p => p.id == id);
-
-    if (!pregunta) {
-        return res.status(404).json({ mensaje: 'Pregunta no encontrada' });
+    // Actualizar estadísticas
+    let preguntaEstadistica = estadisticas.dadesPerPregunta.find(item => item.id === id);
+    if (!preguntaEstadistica) {
+        preguntaEstadistica = { id, correctes: 0, intents: 0 };
+        estadisticas.dadesPerPregunta.push(preguntaEstadistica);
     }
 
-    res.json(pregunta);
-});
+    // Incrementar el conteo de intentos
+    preguntaEstadistica.intents += 1;
 
-app.post('/upload', upload.single('imagen'), (req, res) => {
-    if (!req.file) {
-        return res.status(400).json({ mensaje: 'No se ha subido ninguna imagen' });
-    }
-    res.status(201).json({ mensaje: 'Imagen subida correctamente', file: req.file });
-});
-
-app.post('/preguntas', (req, res) => {
-    const nuevaPregunta = { id: preguntas.length + 1, ...req.body };
-    preguntas.push(nuevaPregunta);
-    guardarPreguntas();
-    res.status(201).json(nuevaPregunta);
-});
-
-app.put('/preguntas/:id', (req, res) => {
-    const { id } = req.params;
-    const preguntaIndex = preguntas.findIndex(p => p.id == id);
-
-    if (preguntaIndex === -1) {
-        return res.status(404).json({ mensaje: 'Pregunta no encontrada' });
+    // Incrementar el conteo de respuestas correctas
+    if (correcta) {
+        preguntaEstadistica.correctes += 1;
     }
 
-    preguntas[preguntaIndex] = { ...preguntas[preguntaIndex], ...req.body };
-    guardarPreguntas();
-    res.json(preguntas[preguntaIndex]);
+    guardarEstadisticas(); // Guardar estadísticas después de cada respuesta
+
+    res.status(200).json({ message: 'Respuesta registrada con éxito' });
 });
 
-app.delete('/preguntas/:id', (req, res) => {
-    const { id } = req.params;
-    const preguntaIndex = preguntas.findIndex(p => p.id == id);
-
-    if (preguntaIndex === -1) {
-        return res.status(404).json({ mensaje: 'Pregunta no encontrada' });
-    }
-
-    preguntas.splice(preguntaIndex, 1);
-    guardarPreguntas();
-    res.status(200).json({ mensaje: 'Pregunta eliminada correctamente' });
+// Endpoint para obtener estadísticas
+app.get('/estadisticas', (req, res) => {
+    res.json(estadisticas);
 });
 
-app.get('/preguntas/continente/:continente', (req, res) => {
-    const { continente } = req.params;
-    const preguntasFiltradas = preguntas.filter(p => p.continente.toLowerCase() === continente.toLowerCase());
+// Endpoint para generar el gráfico usando Python
+app.get('/generar-grafico', (req, res) => {
+    exec('python3 ./python/prova.py', (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Error al ejecutar el script: ${error.message}`);
+            return res.status(500).json({ error: 'Error al generar el gráfico' });
+        }
+        if (stderr) {
+            console.error(`Error: ${stderr}`);
+            return res.status(500).json({ error: 'Error al generar el gráfico' });
+        }
 
-    if (preguntasFiltradas.length === 0) {
-        return res.status(404).json({ mensaje: 'No se encontraron preguntas para el continente especificado' });
-    }
-
-    res.json(preguntasFiltradas);
+        // Verificar si se generó el gráfico
+        const imagePath = path.join(__dirname, 'images', new Date().toLocaleDateString('en-GB'), 'output.png'); // Cambia esto según tu lógica de nombres
+        if (fs.existsSync(imagePath)) {
+            res.status(200).json({ message: 'Gráfico generado con éxito', imageUrl: `http://localhost:5000/images/${new Date().toLocaleDateString('en-GB')}/output.png` });
+        } else {
+            res.status(500).json({ error: 'El gráfico no se generó, verifica los datos' });
+        }
+    });
 });
 
-app.get('/preguntas/dificultad/:dificultad', (req, res) => {
-    const { dificultad } = req.params;
-    const preguntasFiltradas = preguntas.filter(p => p.dificultat == dificultad);
 
-    if (preguntasFiltradas.length === 0) {
-        return res.status(404).json({ mensaje: 'No se encontraron preguntas para la dificultad especificada' });
-    }
-
-    res.json(preguntasFiltradas);
+// Endpoint para acceder al gráfico generado
+app.get('/images/18-10-2024/output.png', (req, res) => {
+    const { date } = req.params;
+    const imagePath = path.join(__dirname, 'images', date, 'output.png');
+    
+    res.sendFile(imagePath, (err) => {
+        if (err) {
+            console.error(err);
+            res.status(404).send('Imagen no encontrada');
+        }
+    });
 });
 
+// Iniciar el servidor
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
